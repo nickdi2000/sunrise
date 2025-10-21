@@ -1,0 +1,12 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+- always build robust, clean, defensive code with proper error handling
+- the UI should be clean, modern and high contrast like Uber, (dark black primary buttons, outlined secondary)
+- always show blank states (like a list with no data)
+- when navigating into details of something (like a list of records to a specific record), always add a back button
+- put things into their own components if they are complex enough to justify it, and break it up by responsibility making it agostic to parent components when possible. 
+- show error/success messages on the page inline (dismissable) after any kind of form submission (POST/PUT etc) 

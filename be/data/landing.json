@@ -1,0 +1,129 @@
+{
+  "branding": {
+    "logo": "/images/sunrise-youth-logo.jpeg",
+    "alt": "SunriseYouth Logo"
+  },
+  "navigation": {
+    "logo": {
+      "image": "/sun.png",
+      "text": "SunriseYouth",
+      "alt": "Sun Logo"
+    },
+    "links": [
+      {
+        "text": "About",
+        "href": "#about"
+      },
+      {
+        "text": "Programs",
+        "href": "#programs"
+      },
+      {
+        "text": "Contact",
+        "href": "/contact"
+      }
+    ],
+    "cta": {
+      "text": "Get Involved",
+      "href": "/contact"
+    }
+  },
+  "hero": {
+    "title": "Empowering Youth Through Arts",
+    "subtitle": "Building confidence, creativity, and community through performance and visual arts",
+    "buttons": [
+      {
+        "text": "Explore Programs",
+        "href": "#programs",
+        "type": "primary"
+      },
+      {
+        "text": "Learn More",
+        "href": "#about",
+        "type": "secondary"
+      }
+    ]
+  },
+  "about": {
+    "title": "SunRiseYouth Arts Collective",
+    "subtitle": "Run by Youth, for Youth",
+    "paragraphs": [
+      "At SunRiseYouth, our goal is to uplift and encourage aspiring young artists by building connections with parents who share our vision for youth development through the arts. We are grassroots, community-driven initiative that recognizes the lack of creative spaces for youth to connect, collaborate, and express themselves.",
+      "Together with parents and local businesses, we aim to create events where youth in our community can proudly showcase their talents, whether in music, art, or spoken word.",
+      "Our initiative is built on peer-to-peer positivity, encouraging young people to work together from start to finish on creative projects. Our first project will focus on organizing live music performances featuring only youth performers aged 16 and under.",
+      "These events are non-competitive, there are no judges, no rankings, and no winners or losers. Every performance is valued equally. Our goal is simply to celebrate each child's courage and creativity, regardless of their level of experience."
+    ],
+    "callout": {
+      "title": "Calling All Young Creatives",
+      "content": "If your child is a musician, artist, poet, or performer of any kind, we warmly invite them to take part in our upcoming community showcases. This is just the beginning, as we grow, we envision even bigger and more exciting opportunities for youth expression and collaboration."
+    }
+  },
+  "programs": {
+    "title": "Our Programs",
+    "items": [
+      {
+        "icon": "music",
+        "title": "Live Open Stage",
+        "description": "Experience performing on a real stage with professional equipment.",
+        "link": {
+          "text": "Visit Stage",
+          "href": "https://jamrunner.com/app/stages/nextgen",
+          "external": true
+        }
+      },
+      {
+        "icon": "art",
+        "title": "Visual Arts",
+        "description": "Express yourself through painting, drawing, and digital art."
+      },
+      {
+        "icon": "production",
+        "title": "Music Production",
+        "description": "Learn modern music production techniques and recording."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join the SunriseYouth Community",
+    "subtitle": "Stay updated with our latest events and programs",
+    "buttons": [
+      {
+        "text": "Get Updates",
+        "href": "#",
+        "type": "primary"
+      },
+      {
+        "text": "Volunteer/Partner",
+        "href": "#",
+        "type": "secondary"
+      }
+    ]
+  },
+  "footer": {
+    "branding": {
+      "title": "SunriseYouth",
+      "tagline": "Youth arts. Community. Confidence."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Programs",
+          "href": "#programs"
+        },
+        {
+          "text": "Contact",
+          "href": "/contact"
+        },
+        {
+          "text": "Admin",
+          "href": "/login"
+        }
+      ]
+    }
+  }
+}

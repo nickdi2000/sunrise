@@ -1,0 +1,7 @@
+
+> webfly-be@1.0.0 dev
+> node app.js
+
+[dotenv@17.2.2] injecting env (2) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+Connected to MongoDB
+API listening on port 3033
