@@ -1,0 +1,593 @@
+2025-10-23T09:30:39: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2025-10-23T09:30:39: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2025-10-23T09:30:39: [DEBUG] Attempting MongoDB connection...
+2025-10-23T09:30:39: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T09:30:39: [DEBUG] Creating MongoDB client...
+2025-10-23T09:30:39: [DEBUG] Attempting to connect...
+2025-10-23T09:30:39: [DEBUG] Running ping command...
+2025-10-23T09:30:39: [SUCCESS] Connected to MongoDB
+2025-10-23T09:30:39: [DEBUG] Successfully tested content collection access
+2025-10-23T09:30:39: API listening on port 3033
+2025-10-23T09:31:20: [DEBUG] GET /api/content {
+2025-10-23T09:31:20:   headers: {
+2025-10-23T09:31:20:     host: 'localhost:3033',
+2025-10-23T09:31:20:     connection: 'keep-alive',
+2025-10-23T09:31:20:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T09:31:20:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T09:31:20:     accept: 'application/json, text/plain, */*',
+2025-10-23T09:31:20:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T09:31:20:     'sec-ch-ua-mobile': '?0',
+2025-10-23T09:31:20:     origin: 'http://localhost:5144',
+2025-10-23T09:31:20:     'sec-fetch-site': 'same-site',
+2025-10-23T09:31:20:     'sec-fetch-mode': 'cors',
+2025-10-23T09:31:20:     'sec-fetch-dest': 'empty',
+2025-10-23T09:31:20:     referer: 'http://localhost:5144/',
+2025-10-23T09:31:20:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T09:31:20:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T09:31:20:     'if-none-match': 'W/"c8a-uO0SMWaiTWyTD7fMEYIshYxR8uA"'
+2025-10-23T09:31:20:   },
+2025-10-23T09:31:20:   body: undefined
+2025-10-23T09:31:20: }
+2025-10-23T09:31:20: [gen0wo][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T09:31:20: [gen0wo][DEBUG] Attempting to find content document...
+2025-10-23T09:31:20: [gen0wo][INFO] Content retrieved successfully
+2025-10-23T09:33:34: [DEBUG] GET /api/content {
+2025-10-23T09:33:34:   headers: {
+2025-10-23T09:33:34:     host: 'localhost:3033',
+2025-10-23T09:33:34:     connection: 'keep-alive',
+2025-10-23T09:33:34:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T09:33:34:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T09:33:34:     accept: 'application/json, text/plain, */*',
+2025-10-23T09:33:34:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T09:33:34:     'sec-ch-ua-mobile': '?0',
+2025-10-23T09:33:34:     origin: 'http://localhost:5144',
+2025-10-23T09:33:34:     'sec-fetch-site': 'same-site',
+2025-10-23T09:33:34:     'sec-fetch-mode': 'cors',
+2025-10-23T09:33:34:     'sec-fetch-dest': 'empty',
+2025-10-23T09:33:34:     referer: 'http://localhost:5144/',
+2025-10-23T09:33:34:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T09:33:34:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T09:33:34:     'if-none-match': 'W/"c8a-E/BhmN1EzEuJ/4UwqngktDdR1aQ"'
+2025-10-23T09:33:34:   },
+2025-10-23T09:33:34:   body: undefined
+2025-10-23T09:33:34: }
+2025-10-23T09:33:34: [2wnhwh][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T09:33:34: [2wnhwh][DEBUG] Attempting to find content document...
+2025-10-23T09:33:34: [2wnhwh][INFO] Content retrieved successfully
+2025-10-23T10:01:25: [INFO] Disconnected from MongoDB
+2025-10-23T10:01:26: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2025-10-23T10:01:26: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2025-10-23T10:01:26: [DEBUG] Attempting MongoDB connection...
+2025-10-23T10:01:26: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T10:01:26: [DEBUG] Creating MongoDB client...
+2025-10-23T10:01:26: [DEBUG] Attempting to connect...
+2025-10-23T10:01:26: [DEBUG] Running ping command...
+2025-10-23T10:01:26: [SUCCESS] Connected to MongoDB
+2025-10-23T10:01:26: [DEBUG] Successfully tested content collection access
+2025-10-23T10:01:26: API listening on port 3033
+2025-10-23T10:01:27: [INFO] Disconnected from MongoDB
+2025-10-23T10:01:28: [dotenv@17.2.2] injecting env (2) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-10-23T10:01:28: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2025-10-23T10:01:28: [DEBUG] Attempting MongoDB connection...
+2025-10-23T10:01:28: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T10:01:28: [DEBUG] Creating MongoDB client...
+2025-10-23T10:01:28: [DEBUG] Attempting to connect...
+2025-10-23T10:01:28: [DEBUG] Running ping command...
+2025-10-23T10:01:28: [SUCCESS] Connected to MongoDB
+2025-10-23T10:01:28: [DEBUG] Successfully tested content collection access
+2025-10-23T10:01:28: API listening on port 3033
+2025-10-23T10:01:28: [INFO] Disconnected from MongoDB
+2025-10-23T10:01:29: [dotenv@17.2.2] injecting env (2) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2025-10-23T10:01:29: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-10-23T10:01:29: [DEBUG] Attempting MongoDB connection...
+2025-10-23T10:01:29: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T10:01:29: [DEBUG] Creating MongoDB client...
+2025-10-23T10:01:29: [DEBUG] Attempting to connect...
+2025-10-23T10:01:29: [DEBUG] Running ping command...
+2025-10-23T10:01:29: [SUCCESS] Connected to MongoDB
+2025-10-23T10:01:29: [DEBUG] Successfully tested content collection access
+2025-10-23T10:01:29: API listening on port 3033
+2025-10-23T10:01:30: [INFO] Disconnected from MongoDB
+2025-10-23T10:01:30: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-10-23T10:01:30: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-10-23T10:01:30: [DEBUG] Attempting MongoDB connection...
+2025-10-23T10:01:30: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T10:01:30: [DEBUG] Creating MongoDB client...
+2025-10-23T10:01:30: [DEBUG] Attempting to connect...
+2025-10-23T10:01:30: [DEBUG] Running ping command...
+2025-10-23T10:01:30: [SUCCESS] Connected to MongoDB
+2025-10-23T10:01:30: [DEBUG] Successfully tested content collection access
+2025-10-23T10:01:30: API listening on port 3033
+2025-10-23T10:02:23: [DEBUG] GET /api/content {
+2025-10-23T10:02:23:   headers: {
+2025-10-23T10:02:23:     host: 'localhost:3033',
+2025-10-23T10:02:23:     connection: 'keep-alive',
+2025-10-23T10:02:23:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:02:23:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:02:23:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:02:23:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:02:23:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:02:23:     origin: 'http://localhost:5144',
+2025-10-23T10:02:23:     'sec-fetch-site': 'same-site',
+2025-10-23T10:02:23:     'sec-fetch-mode': 'cors',
+2025-10-23T10:02:23:     'sec-fetch-dest': 'empty',
+2025-10-23T10:02:23:     referer: 'http://localhost:5144/',
+2025-10-23T10:02:23:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:02:23:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T10:02:23:     'if-none-match': 'W/"c8a-GQiFAbwqW1KI5z8WO256HflCErg"'
+2025-10-23T10:02:23:   },
+2025-10-23T10:02:23:   body: undefined
+2025-10-23T10:02:23: }
+2025-10-23T10:02:23: [xelojo][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:02:23: [xelojo][DEBUG] Attempting to find content document...
+2025-10-23T10:02:23: [xelojo][INFO] Content retrieved successfully
+2025-10-23T10:02:44: [INFO] Disconnected from MongoDB
+2025-10-23T10:02:45: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-10-23T10:02:45: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-10-23T10:02:45: [DEBUG] Attempting MongoDB connection...
+2025-10-23T10:02:45: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T10:02:45: [DEBUG] Creating MongoDB client...
+2025-10-23T10:02:45: [DEBUG] Attempting to connect...
+2025-10-23T10:02:45: [DEBUG] Running ping command...
+2025-10-23T10:02:45: [SUCCESS] Connected to MongoDB
+2025-10-23T10:02:45: [DEBUG] Successfully tested content collection access
+2025-10-23T10:02:45: API listening on port 3033
+2025-10-23T10:03:41: [INFO] Disconnected from MongoDB
+2025-10-23T10:03:42: [dotenv@17.2.2] injecting env (2) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+2025-10-23T10:03:42: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2025-10-23T10:03:42: [DEBUG] Attempting MongoDB connection...
+2025-10-23T10:03:42: [DEBUG] MongoDB URL configured: Yes
+2025-10-23T10:03:42: [DEBUG] Creating MongoDB client...
+2025-10-23T10:03:42: [DEBUG] Attempting to connect...
+2025-10-23T10:03:42: [DEBUG] Running ping command...
+2025-10-23T10:03:42: [SUCCESS] Connected to MongoDB
+2025-10-23T10:03:42: [DEBUG] Successfully tested content collection access
+2025-10-23T10:03:42: API listening on port 3033
+2025-10-23T10:18:57: [DEBUG] GET /api/content {
+2025-10-23T10:18:57:   headers: {
+2025-10-23T10:18:57:     host: 'localhost:3033',
+2025-10-23T10:18:57:     connection: 'keep-alive',
+2025-10-23T10:18:57:     pragma: 'no-cache',
+2025-10-23T10:18:57:     'cache-control': 'no-cache',
+2025-10-23T10:18:57:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:18:57:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:18:57:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:18:57:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:18:57:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:18:57:     origin: 'http://localhost:5144',
+2025-10-23T10:18:57:     'sec-fetch-site': 'same-site',
+2025-10-23T10:18:57:     'sec-fetch-mode': 'cors',
+2025-10-23T10:18:57:     'sec-fetch-dest': 'empty',
+2025-10-23T10:18:57:     referer: 'http://localhost:5144/',
+2025-10-23T10:18:57:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:18:57:     'accept-language': 'en-US,en;q=0.9'
+2025-10-23T10:18:57:   },
+2025-10-23T10:18:57:   body: undefined
+2025-10-23T10:18:57: }
+2025-10-23T10:18:57: [ekxton][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:18:57: [ekxton][DEBUG] Attempting to find content document...
+2025-10-23T10:18:57: [ekxton][INFO] Content retrieved successfully
+2025-10-23T10:19:39: [DEBUG] GET /api/content {
+2025-10-23T10:19:39:   headers: {
+2025-10-23T10:19:39:     host: 'localhost:3033',
+2025-10-23T10:19:39:     connection: 'keep-alive',
+2025-10-23T10:19:39:     pragma: 'no-cache',
+2025-10-23T10:19:39:     'cache-control': 'no-cache',
+2025-10-23T10:19:39:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:19:39:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:19:39:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:19:39:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:19:39:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:19:39:     origin: 'http://localhost:5144',
+2025-10-23T10:19:39:     'sec-fetch-site': 'same-site',
+2025-10-23T10:19:39:     'sec-fetch-mode': 'cors',
+2025-10-23T10:19:39:     'sec-fetch-dest': 'empty',
+2025-10-23T10:19:39:     referer: 'http://localhost:5144/',
+2025-10-23T10:19:39:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:19:39:     'accept-language': 'en-US,en;q=0.9'
+2025-10-23T10:19:39:   },
+2025-10-23T10:19:39:   body: undefined
+2025-10-23T10:19:39: }
+2025-10-23T10:19:39: [pn2cxr][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:19:39: [pn2cxr][DEBUG] Attempting to find content document...
+2025-10-23T10:19:39: [pn2cxr][INFO] Content retrieved successfully
+2025-10-23T10:19:41: [DEBUG] GET /api/content {
+2025-10-23T10:19:41:   headers: {
+2025-10-23T10:19:41:     host: 'localhost:3033',
+2025-10-23T10:19:41:     connection: 'keep-alive',
+2025-10-23T10:19:41:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:19:41:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:19:41:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:19:41:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:19:41:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:19:41:     origin: 'http://localhost:5144',
+2025-10-23T10:19:41:     'sec-fetch-site': 'same-site',
+2025-10-23T10:19:41:     'sec-fetch-mode': 'cors',
+2025-10-23T10:19:41:     'sec-fetch-dest': 'empty',
+2025-10-23T10:19:41:     referer: 'http://localhost:5144/',
+2025-10-23T10:19:41:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:19:41:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T10:19:41:     'if-none-match': 'W/"c8a-6zL69TwSHUKMhwiS7pt55qB+wsk"'
+2025-10-23T10:19:41:   },
+2025-10-23T10:19:41:   body: undefined
+2025-10-23T10:19:41: }
+2025-10-23T10:19:41: [35bn98][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:19:41: [35bn98][DEBUG] Attempting to find content document...
+2025-10-23T10:19:41: [35bn98][INFO] Content retrieved successfully
+2025-10-23T10:20:49: [DEBUG] GET /api/content {
+2025-10-23T10:20:49:   headers: {
+2025-10-23T10:20:49:     host: 'localhost:3033',
+2025-10-23T10:20:49:     connection: 'keep-alive',
+2025-10-23T10:20:49:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:20:49:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:20:49:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:20:49:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:20:49:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:20:49:     origin: 'http://localhost:5144',
+2025-10-23T10:20:49:     'sec-fetch-site': 'same-site',
+2025-10-23T10:20:49:     'sec-fetch-mode': 'cors',
+2025-10-23T10:20:49:     'sec-fetch-dest': 'empty',
+2025-10-23T10:20:49:     referer: 'http://localhost:5144/',
+2025-10-23T10:20:49:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:20:49:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T10:20:49:     'if-none-match': 'W/"c8a-BdXeAB0JKJFTbvv97UBBHO+GW10"'
+2025-10-23T10:20:49:   },
+2025-10-23T10:20:49:   body: undefined
+2025-10-23T10:20:49: }
+2025-10-23T10:20:49: [x7tqk8][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:20:49: [x7tqk8][DEBUG] Attempting to find content document...
+2025-10-23T10:20:49: [x7tqk8][INFO] Content retrieved successfully
+2025-10-23T10:20:50: [DEBUG] GET /api/content {
+2025-10-23T10:20:50:   headers: {
+2025-10-23T10:20:50:     host: 'localhost:3033',
+2025-10-23T10:20:50:     connection: 'keep-alive',
+2025-10-23T10:20:50:     pragma: 'no-cache',
+2025-10-23T10:20:50:     'cache-control': 'no-cache',
+2025-10-23T10:20:50:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:20:50:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:20:50:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:20:50:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:20:50:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:20:50:     origin: 'http://localhost:5144',
+2025-10-23T10:20:50:     'sec-fetch-site': 'same-site',
+2025-10-23T10:20:50:     'sec-fetch-mode': 'cors',
+2025-10-23T10:20:50:     'sec-fetch-dest': 'empty',
+2025-10-23T10:20:50:     referer: 'http://localhost:5144/',
+2025-10-23T10:20:50:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:20:50:     'accept-language': 'en-US,en;q=0.9'
+2025-10-23T10:20:50:   },
+2025-10-23T10:20:50:   body: undefined
+2025-10-23T10:20:50: }
+2025-10-23T10:20:50: [ed4its][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:20:50: [ed4its][DEBUG] Attempting to find content document...
+2025-10-23T10:20:50: [ed4its][INFO] Content retrieved successfully
+2025-10-23T10:25:03: [DEBUG] GET /api/content {
+2025-10-23T10:25:03:   headers: {
+2025-10-23T10:25:03:     host: 'localhost:3033',
+2025-10-23T10:25:03:     connection: 'keep-alive',
+2025-10-23T10:25:03:     pragma: 'no-cache',
+2025-10-23T10:25:03:     'cache-control': 'no-cache',
+2025-10-23T10:25:03:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:25:03:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:25:03:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:25:03:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:25:03:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:25:03:     origin: 'http://localhost:5144',
+2025-10-23T10:25:03:     'sec-fetch-site': 'same-site',
+2025-10-23T10:25:03:     'sec-fetch-mode': 'cors',
+2025-10-23T10:25:03:     'sec-fetch-dest': 'empty',
+2025-10-23T10:25:03:     referer: 'http://localhost:5144/',
+2025-10-23T10:25:03:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:25:03:     'accept-language': 'en-US,en;q=0.9'
+2025-10-23T10:25:03:   },
+2025-10-23T10:25:03:   body: undefined
+2025-10-23T10:25:03: }
+2025-10-23T10:25:03: [04stinm][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:25:03: [04stinm][DEBUG] Attempting to find content document...
+2025-10-23T10:25:03: [04stinm][INFO] Content retrieved successfully
+2025-10-23T10:49:53: [DEBUG] GET /api/content {
+2025-10-23T10:49:53:   headers: {
+2025-10-23T10:49:53:     host: 'localhost:3033',
+2025-10-23T10:49:53:     connection: 'keep-alive',
+2025-10-23T10:49:53:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:49:53:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:49:53:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:49:53:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:49:53:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:49:53:     origin: 'http://localhost:5144',
+2025-10-23T10:49:53:     'sec-fetch-site': 'same-site',
+2025-10-23T10:49:53:     'sec-fetch-mode': 'cors',
+2025-10-23T10:49:53:     'sec-fetch-dest': 'empty',
+2025-10-23T10:49:53:     referer: 'http://localhost:5144/',
+2025-10-23T10:49:53:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:49:53:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T10:49:53:     'if-none-match': 'W/"c8a-LNa7bZi/R4I3qIC25glMjZZLaE8"'
+2025-10-23T10:49:53:   },
+2025-10-23T10:49:53:   body: undefined
+2025-10-23T10:49:53: }
+2025-10-23T10:49:53: [wsjcc][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:49:53: [wsjcc][DEBUG] Attempting to find content document...
+2025-10-23T10:49:53: [wsjcc][INFO] Content retrieved successfully
+2025-10-23T10:52:23: [DEBUG] GET /api/content {
+2025-10-23T10:52:23:   headers: {
+2025-10-23T10:52:23:     host: 'localhost:3033',
+2025-10-23T10:52:23:     connection: 'keep-alive',
+2025-10-23T10:52:23:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T10:52:23:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T10:52:23:     accept: 'application/json, text/plain, */*',
+2025-10-23T10:52:23:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T10:52:23:     'sec-ch-ua-mobile': '?0',
+2025-10-23T10:52:23:     origin: 'http://localhost:5144',
+2025-10-23T10:52:23:     'sec-fetch-site': 'same-site',
+2025-10-23T10:52:23:     'sec-fetch-mode': 'cors',
+2025-10-23T10:52:23:     'sec-fetch-dest': 'empty',
+2025-10-23T10:52:23:     referer: 'http://localhost:5144/',
+2025-10-23T10:52:23:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T10:52:23:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T10:52:23:     'if-none-match': 'W/"c8a-f0utIuyUm327I0C59j7z52jrACo"'
+2025-10-23T10:52:23:   },
+2025-10-23T10:52:23:   body: undefined
+2025-10-23T10:52:23: }
+2025-10-23T10:52:23: [0e9rcr][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T10:52:23: [0e9rcr][DEBUG] Attempting to find content document...
+2025-10-23T10:52:23: [0e9rcr][INFO] Content retrieved successfully
+2025-10-23T14:34:25: [DEBUG] GET /api/content {
+2025-10-23T14:34:25:   headers: {
+2025-10-23T14:34:25:     host: 'localhost:3033',
+2025-10-23T14:34:25:     connection: 'keep-alive',
+2025-10-23T14:34:25:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:34:25:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:34:25:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:34:25:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:34:25:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:34:25:     origin: 'http://localhost:5144',
+2025-10-23T14:34:25:     'sec-fetch-site': 'same-site',
+2025-10-23T14:34:25:     'sec-fetch-mode': 'cors',
+2025-10-23T14:34:25:     'sec-fetch-dest': 'empty',
+2025-10-23T14:34:25:     referer: 'http://localhost:5144/',
+2025-10-23T14:34:25:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:34:25:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:34:25:     'if-none-match': 'W/"c8a-lqmM/Nxn1ExRWfTqlwm2in1bCbE"'
+2025-10-23T14:34:25:   },
+2025-10-23T14:34:25:   body: undefined
+2025-10-23T14:34:25: }
+2025-10-23T14:34:25: [p96ojk][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:34:25: [p96ojk][DEBUG] Attempting to find content document...
+2025-10-23T14:34:25: [p96ojk][INFO] Content retrieved successfully
+2025-10-23T14:40:59: [DEBUG] GET /api/content {
+2025-10-23T14:40:59:   headers: {
+2025-10-23T14:40:59:     host: 'localhost:3033',
+2025-10-23T14:40:59:     connection: 'keep-alive',
+2025-10-23T14:40:59:     'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+2025-10-23T14:40:59:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:40:59:     origin: 'http://localhost:5144',
+2025-10-23T14:40:59:     'sec-fetch-site': 'same-site',
+2025-10-23T14:40:59:     'sec-fetch-mode': 'cors',
+2025-10-23T14:40:59:     'sec-fetch-dest': 'empty',
+2025-10-23T14:40:59:     referer: 'http://localhost:5144/',
+2025-10-23T14:40:59:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:40:59:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:40:59:     'if-none-match': 'W/"c8a-7dYRQLn8ADbRyIY/l96qZnngVeE"'
+2025-10-23T14:40:59:   },
+2025-10-23T14:40:59:   body: undefined
+2025-10-23T14:40:59: }
+2025-10-23T14:40:59: [vfz2hp][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:40:59: [vfz2hp][DEBUG] Attempting to find content document...
+2025-10-23T14:40:59: [vfz2hp][INFO] Content retrieved successfully
+2025-10-23T14:43:00: [DEBUG] GET /api/content {
+2025-10-23T14:43:00:   headers: {
+2025-10-23T14:43:00:     host: 'localhost:3033',
+2025-10-23T14:43:00:     connection: 'keep-alive',
+2025-10-23T14:43:00:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:43:00:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:43:00:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:43:00:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:43:00:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:43:00:     origin: 'http://localhost:5144',
+2025-10-23T14:43:00:     'sec-fetch-site': 'same-site',
+2025-10-23T14:43:00:     'sec-fetch-mode': 'cors',
+2025-10-23T14:43:00:     'sec-fetch-dest': 'empty',
+2025-10-23T14:43:00:     referer: 'http://localhost:5144/',
+2025-10-23T14:43:00:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:43:00:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:43:00:     'if-none-match': 'W/"c8a-Lpm01G0tQxKvJfrugx0zq24aqsg"'
+2025-10-23T14:43:00:   },
+2025-10-23T14:43:00:   body: undefined
+2025-10-23T14:43:00: }
+2025-10-23T14:43:00: [kqe7l][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:43:00: [kqe7l][DEBUG] Attempting to find content document...
+2025-10-23T14:43:00: [kqe7l][INFO] Content retrieved successfully
+2025-10-23T14:43:01: [DEBUG] GET /api/content {
+2025-10-23T14:43:01:   headers: {
+2025-10-23T14:43:01:     host: 'localhost:3033',
+2025-10-23T14:43:01:     connection: 'keep-alive',
+2025-10-23T14:43:01:     pragma: 'no-cache',
+2025-10-23T14:43:01:     'cache-control': 'no-cache',
+2025-10-23T14:43:01:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:43:01:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:43:01:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:43:01:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:43:01:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:43:01:     origin: 'http://localhost:5144',
+2025-10-23T14:43:01:     'sec-fetch-site': 'same-site',
+2025-10-23T14:43:01:     'sec-fetch-mode': 'cors',
+2025-10-23T14:43:01:     'sec-fetch-dest': 'empty',
+2025-10-23T14:43:01:     referer: 'http://localhost:5144/',
+2025-10-23T14:43:01:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:43:01:     'accept-language': 'en-US,en;q=0.9'
+2025-10-23T14:43:01:   },
+2025-10-23T14:43:01:   body: undefined
+2025-10-23T14:43:01: }
+2025-10-23T14:43:01: [k1cgvg][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:43:01: [k1cgvg][DEBUG] Attempting to find content document...
+2025-10-23T14:43:01: [k1cgvg][INFO] Content retrieved successfully
+2025-10-23T14:43:37: [DEBUG] GET /api/content {
+2025-10-23T14:43:37:   headers: {
+2025-10-23T14:43:37:     host: 'localhost:3033',
+2025-10-23T14:43:37:     connection: 'keep-alive',
+2025-10-23T14:43:37:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:43:37:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:43:37:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:43:37:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:43:37:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:43:37:     origin: 'http://localhost:5144',
+2025-10-23T14:43:37:     'sec-fetch-site': 'same-site',
+2025-10-23T14:43:37:     'sec-fetch-mode': 'cors',
+2025-10-23T14:43:37:     'sec-fetch-dest': 'empty',
+2025-10-23T14:43:37:     referer: 'http://localhost:5144/',
+2025-10-23T14:43:37:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:43:37:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:43:37:     'if-none-match': 'W/"c8a-faiJpdAsd0n8TCkibKTReOoCYhg"'
+2025-10-23T14:43:37:   },
+2025-10-23T14:43:37:   body: undefined
+2025-10-23T14:43:37: }
+2025-10-23T14:43:37: [3o4iz][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:43:37: [3o4iz][DEBUG] Attempting to find content document...
+2025-10-23T14:43:37: [3o4iz][INFO] Content retrieved successfully
+2025-10-23T14:43:51: [DEBUG] GET /api/content {
+2025-10-23T14:43:51:   headers: {
+2025-10-23T14:43:51:     host: 'localhost:3033',
+2025-10-23T14:43:51:     connection: 'keep-alive',
+2025-10-23T14:43:51:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:43:51:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:43:51:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:43:51:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:43:51:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:43:51:     origin: 'http://localhost:5144',
+2025-10-23T14:43:51:     'sec-fetch-site': 'same-site',
+2025-10-23T14:43:51:     'sec-fetch-mode': 'cors',
+2025-10-23T14:43:51:     'sec-fetch-dest': 'empty',
+2025-10-23T14:43:51:     referer: 'http://localhost:5144/',
+2025-10-23T14:43:51:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:43:51:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:43:51:     'if-none-match': 'W/"c8a-sOkKJVkwdPKF4BsOqFIN3xXsFMw"'
+2025-10-23T14:43:51:   },
+2025-10-23T14:43:51:   body: undefined
+2025-10-23T14:43:51: }
+2025-10-23T14:43:51: [sz8cog][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:43:51: [sz8cog][DEBUG] Attempting to find content document...
+2025-10-23T14:43:51: [sz8cog][INFO] Content retrieved successfully
+2025-10-23T14:44:40: [DEBUG] GET /api/content {
+2025-10-23T14:44:40:   headers: {
+2025-10-23T14:44:40:     host: 'localhost:3033',
+2025-10-23T14:44:40:     connection: 'keep-alive',
+2025-10-23T14:44:40:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:44:40:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:44:40:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:44:40:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:44:40:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:44:40:     origin: 'http://localhost:5144',
+2025-10-23T14:44:40:     'sec-fetch-site': 'same-site',
+2025-10-23T14:44:40:     'sec-fetch-mode': 'cors',
+2025-10-23T14:44:40:     'sec-fetch-dest': 'empty',
+2025-10-23T14:44:40:     referer: 'http://localhost:5144/',
+2025-10-23T14:44:40:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:44:40:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:44:40:     'if-none-match': 'W/"c8a-hX/a58z9IO4BzHAIwViwYZDbhg8"'
+2025-10-23T14:44:40:   },
+2025-10-23T14:44:40:   body: undefined
+2025-10-23T14:44:40: }
+2025-10-23T14:44:40: [3j4n3][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:44:40: [3j4n3][DEBUG] Attempting to find content document...
+2025-10-23T14:44:40: [3j4n3][INFO] Content retrieved successfully
+2025-10-23T14:45:17: [DEBUG] GET /api/content {
+2025-10-23T14:45:17:   headers: {
+2025-10-23T14:45:17:     host: 'localhost:3033',
+2025-10-23T14:45:17:     connection: 'keep-alive',
+2025-10-23T14:45:17:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:45:17:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:45:17:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:45:17:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:45:17:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:45:17:     origin: 'http://localhost:5144',
+2025-10-23T14:45:17:     'sec-fetch-site': 'same-site',
+2025-10-23T14:45:17:     'sec-fetch-mode': 'cors',
+2025-10-23T14:45:17:     'sec-fetch-dest': 'empty',
+2025-10-23T14:45:17:     referer: 'http://localhost:5144/',
+2025-10-23T14:45:17:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:45:17:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:45:17:     'if-none-match': 'W/"c8a-mc+VLh5wMhyFb9aC5UnNqQMuSZw"'
+2025-10-23T14:45:17:   },
+2025-10-23T14:45:17:   body: undefined
+2025-10-23T14:45:17: }
+2025-10-23T14:45:17: [f7sltp][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:45:17: [f7sltp][DEBUG] Attempting to find content document...
+2025-10-23T14:45:17: [f7sltp][INFO] Content retrieved successfully
+2025-10-23T14:45:17: [DEBUG] GET /api/content {
+2025-10-23T14:45:17:   headers: {
+2025-10-23T14:45:17:     host: 'localhost:3033',
+2025-10-23T14:45:17:     connection: 'keep-alive',
+2025-10-23T14:45:17:     'sec-ch-ua-platform': '"macOS"',
+2025-10-23T14:45:17:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-23T14:45:17:     accept: 'application/json, text/plain, */*',
+2025-10-23T14:45:17:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-23T14:45:17:     'sec-ch-ua-mobile': '?0',
+2025-10-23T14:45:17:     origin: 'http://localhost:5144',
+2025-10-23T14:45:17:     'sec-fetch-site': 'same-site',
+2025-10-23T14:45:17:     'sec-fetch-mode': 'cors',
+2025-10-23T14:45:17:     'sec-fetch-dest': 'empty',
+2025-10-23T14:45:17:     referer: 'http://localhost:5144/',
+2025-10-23T14:45:17:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-23T14:45:17:     'accept-language': 'en-US,en;q=0.9',
+2025-10-23T14:45:17:     'if-none-match': 'W/"c8a-F+uWe9+nviXNwnmbX7kchfJImdU"'
+2025-10-23T14:45:17:   },
+2025-10-23T14:45:17:   body: undefined
+2025-10-23T14:45:17: }
+2025-10-23T14:45:17: [o3uf5l][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-23T14:45:17: [o3uf5l][DEBUG] Attempting to find content document...
+2025-10-23T14:45:17: [o3uf5l][INFO] Content retrieved successfully
+2025-10-28T07:15:17: [DEBUG] GET /api/content {
+2025-10-28T07:15:17:   headers: {
+2025-10-28T07:15:17:     host: 'localhost:3033',
+2025-10-28T07:15:17:     connection: 'keep-alive',
+2025-10-28T07:15:17:     'sec-ch-ua-platform': '"macOS"',
+2025-10-28T07:15:17:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-10-28T07:15:17:     accept: 'application/json, text/plain, */*',
+2025-10-28T07:15:17:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-10-28T07:15:17:     'sec-ch-ua-mobile': '?0',
+2025-10-28T07:15:17:     origin: 'http://localhost:5144',
+2025-10-28T07:15:17:     'sec-fetch-site': 'same-site',
+2025-10-28T07:15:17:     'sec-fetch-mode': 'cors',
+2025-10-28T07:15:17:     'sec-fetch-dest': 'empty',
+2025-10-28T07:15:17:     referer: 'http://localhost:5144/',
+2025-10-28T07:15:17:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-10-28T07:15:17:     'accept-language': 'en-US,en;q=0.9'
+2025-10-28T07:15:17:   },
+2025-10-28T07:15:17:   body: undefined
+2025-10-28T07:15:17: }
+2025-10-28T07:15:17: [bonsr4][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-10-28T07:15:17: [bonsr4][DEBUG] Attempting to find content document...
+2025-10-28T07:15:17: [bonsr4][INFO] Content retrieved successfully
+2025-10-28T07:16:47: [INFO] Disconnected from MongoDB
+2025-10-28T07:16:48: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2025-10-28T07:16:48: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2025-10-28T07:16:48: [DEBUG] Attempting MongoDB connection...
+2025-10-28T07:16:48: [DEBUG] MongoDB URL configured: Yes
+2025-10-28T07:16:48: [DEBUG] Creating MongoDB client...
+2025-10-28T07:16:48: [DEBUG] Attempting to connect...
+2025-10-28T07:16:48: [DEBUG] Running ping command...
+2025-10-28T07:16:48: [SUCCESS] Connected to MongoDB
+2025-10-28T07:16:48: [DEBUG] Successfully tested content collection access
+2025-10-28T07:16:48: API listening on port 3033
+2025-10-28T07:16:58: [INFO] Disconnected from MongoDB
+2025-10-28T07:16:59: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2025-10-28T07:16:59: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-10-28T07:16:59: [DEBUG] Attempting MongoDB connection...
+2025-10-28T07:16:59: [DEBUG] MongoDB URL configured: Yes
+2025-10-28T07:16:59: [DEBUG] Creating MongoDB client...
+2025-10-28T07:16:59: [DEBUG] Attempting to connect...
+2025-10-28T07:16:59: [DEBUG] Running ping command...
+2025-10-28T07:16:59: [SUCCESS] Connected to MongoDB
+2025-10-28T07:16:59: [DEBUG] Successfully tested content collection access
+2025-10-28T07:16:59: API listening on port 3033
+2025-10-28T07:17:04: [INFO] Disconnected from MongoDB
+2025-10-28T07:17:04: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-10-28T07:17:04: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-10-28T07:17:04: [DEBUG] Attempting MongoDB connection...
+2025-10-28T07:17:04: [DEBUG] MongoDB URL configured: Yes
+2025-10-28T07:17:04: [DEBUG] Creating MongoDB client...
+2025-10-28T07:17:04: [DEBUG] Attempting to connect...
+2025-10-28T07:17:04: [DEBUG] Running ping command...
+2025-10-28T07:17:04: [SUCCESS] Connected to MongoDB
+2025-10-28T07:17:04: [DEBUG] Successfully tested content collection access
+2025-10-28T07:17:04: API listening on port 3033

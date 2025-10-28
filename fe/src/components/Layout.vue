@@ -129,7 +129,7 @@ console.log('[Layout] Providing contentRef via toRef:', contentRef);
         </div>
         <div class="border-t border-gray-800 pt-8 text-center">
           <div class="flex flex-col items-center space-y-2">
-            <p class="text-gray-400 text-lg">&copy; {{ currentYear }} SunriseYouth. All rights reserved.</p>
+            <p class="text-gray-400 text-lg">&copy; {{ currentYear }} Evolve Communities. All rights reserved.</p>
             <router-link 
               to="/login" 
               class="text-gray-500 text-sm hover:text-gray-300 transition-colors duration-300"

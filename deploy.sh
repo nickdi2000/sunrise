@@ -6,10 +6,10 @@ set -euo pipefail
 SSH_KEY="/Users/nick/.ssh/id_rsa_hostinger"
 SSH_USER="root"
 SSH_HOST="5.183.8.134"
-REMOTE_DIST_DIR="/opt/webfly/nextgen/fe/dist"
-REMOTE_BE_DIR="/opt/webfly/nextgen/be"
-LOCAL_FE_DIR="/Users/nick/repos/webfly/nextgen/fe"
-LOCAL_BE_DIR="/Users/nick/repos/webfly/nextgen/be"
+REMOTE_DIST_DIR="/opt/nextgen/fe/dist"
+REMOTE_BE_DIR="/opt/nextgen/be"
+LOCAL_FE_DIR="/Users/nick/repos/nextgen/fe"
+LOCAL_BE_DIR="/Users/nick/repos/nextgen/be"
 
 # Prompt for backend deployment
 read -p "Do you want to deploy the backend as well? (y/N) " -n 1 -r
@@ -38,8 +38,8 @@ echo "[6/7] Verifying deployed index.html..."
 ssh -i "$SSH_KEY" -o StrictHostKeyChecking=accept-new "$SSH_USER@$SSH_HOST" "test -f '$REMOTE_DIST_DIR/index.html' && echo 'Deployed index.html present' || (echo 'ERROR: index.html missing' && exit 1)"
 
 echo "[7/8] Syncing nginx configuration..."
-ssh -i "$SSH_KEY" -o StrictHostKeyChecking=accept-new "$SSH_USER@$SSH_HOST" "mkdir -p '/opt/webfly/nextgen/nginx'"
-rsync -avz -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=accept-new" "/Users/nick/repos/webfly/nextgen/nginx/" "$SSH_USER@$SSH_HOST:/opt/webfly/nextgen/nginx/"
+ssh -i "$SSH_KEY" -o StrictHostKeyChecking=accept-new "$SSH_USER@$SSH_HOST" "mkdir -p '/opt/nextgen/nginx'"
+rsync -avz -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=accept-new" "/Users/nick/repos/nextgen/nginx/" "$SSH_USER@$SSH_HOST:/opt/nextgen/nginx/"
 
 echo "[8/8] Testing and reloading nginx configuration..."
 ssh -i "$SSH_KEY" -o StrictHostKeyChecking=accept-new "$SSH_USER@$SSH_HOST" "nginx -t && systemctl reload nginx"

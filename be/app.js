@@ -20,7 +20,7 @@ app.use(express.json());
 
 // Configure CORS
 app.use(cors({
-  origin: ['http://localhost:5144', 'https://sunriseyouth.com', 'https://www.sunriseyouth.com'],
+  origin: ['http://localhost:5144', 'https://evolvecommunities.com', 'https://www.evolvecommunities.com', 'https://sunriseyouth.com', 'https://www.sunriseyouth.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Accept', 'Authorization', 'Cache-Control', 'Content-Type', 'DNT', 'If-Modified-Since', 'Keep-Alive', 'Origin', 'User-Agent', 'X-Requested-With']

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Landing from '../pages/Landing.vue'
+import Home from '../pages/Home.vue'
+import Youth from '../pages/Youth.vue'
 import Contact from '../pages/Contact.vue'
 import NotFound from '../pages/NotFound.vue'
 import Login from '../pages/Login.vue'
@@ -8,7 +9,8 @@ import Messages from '../pages/Messages.vue'
 import { isAuthenticated } from '../utils/auth'
 
 const routes = [
-  { path: '/', name: 'Landing', component: Landing },
+  { path: '/', name: 'Home', component: Home },
+  { path: '/youth', name: 'Youth', component: Youth },
   { path: '/contact', name: 'Contact', component: Contact },
   { 
     path: '/login', 

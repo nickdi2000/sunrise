@@ -35,7 +35,7 @@
             <!-- Logo -->
             <a href="/" class="flex items-center space-x-3 group">
               <img 
-                :src="content?.navigation?.logo?.image || evolveLogo" 
+                src="/src/assets/images/evolve-logo.png"
                 :alt="content?.navigation?.logo?.alt || 'Logo'"
                 class="h-10 w-auto transition-transform group-hover:scale-105" 
               />
@@ -437,3 +437,4 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 </script>
+

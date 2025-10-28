@@ -8,8 +8,8 @@
           <div class="flex items-center justify-between h-16">
             <!-- Logo -->
             <router-link to="/" class="flex items-center">
-              <img src="/sun.png" alt="Sun Logo" class="h-8 w-8" />
-              <span class="ml-2 text-lg font-semibold text-gray-900">SunriseYouth</span>
+              <img src="/images/evolve-logo.png" alt="Evolve Communities Logo" class="h-8 w-auto" />
+              <span class="ml-2 text-lg font-semibold text-gray-900">Evolve Communities</span>
             </router-link>
             
             <!-- Mobile Menu Button -->
@@ -86,8 +86,8 @@
         <div class="hidden lg:flex lg:justify-between lg:h-16">
           <div class="flex items-center">
             <router-link to="/" class="flex items-center">
-              <img src="/sun.png" alt="Sun Logo" class="h-8 w-8" />
-              <span class="ml-3 text-xl font-semibold text-gray-900">SunriseYouth Admin</span>
+              <img src="/images/evolve-logo.png" alt="Evolve Communities Logo" class="h-8 w-auto" />
+              <span class="ml-3 text-xl font-semibold text-gray-900">Evolve Communities Admin</span>
             </router-link>
           </div>
           <div class="flex items-center space-x-4">

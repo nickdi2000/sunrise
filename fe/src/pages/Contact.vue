@@ -24,7 +24,7 @@ const inquiryTypes = [
   {
     id: 'general',
     title: 'General Inquiry',
-    description: 'Questions about SunriseYouth',
+    description: 'Questions about Evolve Communities',
     icon: 'question'
   },
   {
@@ -172,8 +172,8 @@ const handleSubmit = async () => {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
           <router-link to="/" class="flex items-center">
-            <img src="/sun.png" alt="Sun Logo" class="h-8 w-8" />
-            <span class="ml-2 text-xl font-semibold text-gray-900">SunriseYouth</span>
+            <img src="/images/evolve-logo.png" alt="Evolve Communities Logo" class="h-8 w-auto" />
+            <span class="ml-2 text-xl font-semibold text-gray-900">Evolve Communities</span>
           </router-link>
           <div class="flex items-center space-x-4">
             <router-link to="/" class="text-gray-600 hover:text-gray-900">Home</router-link>

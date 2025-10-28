@@ -1,13 +1,13 @@
 {
   "branding": {
-    "logo": "/images/sunrise-youth-logo.jpeg",
-    "alt": "SunriseYouth Logo"
+    "logo": "/images/evolve-logo.png",
+    "alt": "Evolve Communities Logo"
   },
   "navigation": {
     "logo": {
-      "image": "/sun.png",
-      "text": "SunriseYouth",
-      "alt": "Sun Logo"
+      "image": "/images/evolve-logo.png",
+      "text": "Evolve Communities",
+      "alt": "Evolve Communities Logo"
     },
     "links": [
       {
@@ -45,10 +45,10 @@
     ]
   },
   "about": {
-    "title": "SunRiseYouth Arts Collective",
+    "title": "Evolve Communities Arts Collective",
     "subtitle": "Run by Youth, for Youth",
     "paragraphs": [
-      "At SunRiseYouth, our goal is to uplift and encourage aspiring young artists by building connections with parents who share our vision for youth development through the arts. We are grassroots, community-driven initiative that recognizes the lack of creative spaces for youth to connect, collaborate, and express themselves.",
+      "At Evolve Communities, our goal is to uplift and encourage aspiring young artists by building connections with parents who share our vision for youth development through the arts. We are grassroots, community-driven initiative that recognizes the lack of creative spaces for youth to connect, collaborate, and express themselves.",
       "Together with parents and local businesses, we aim to create events where youth in our community can proudly showcase their talents, whether in music, art, or spoken word.",
       "Our initiative is built on peer-to-peer positivity, encouraging young people to work together from start to finish on creative projects. Our first project will focus on organizing live music performances featuring only youth performers aged 16 and under.",
       "These events are non-competitive, there are no judges, no rankings, and no winners or losers. Every performance is valued equally. Our goal is simply to celebrate each child's courage and creativity, regardless of their level of experience."
@@ -84,7 +84,7 @@
     ]
   },
   "cta": {
-    "title": "Join the SunriseYouth Community",
+    "title": "Join the Evolve Communities",
     "subtitle": "Stay updated with our latest events and programs",
     "buttons": [
       {
@@ -101,7 +101,7 @@
   },
   "footer": {
     "branding": {
-      "title": "SunriseYouth",
+      "title": "Evolve Communities",
       "tagline": "Youth arts. Community. Confidence."
     },
     "quickLinks": {
