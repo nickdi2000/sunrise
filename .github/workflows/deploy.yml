@@ -25,24 +25,27 @@ jobs:
           npm run build
 
       - name: Setup SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_SERVER_IP: ${{ vars.SSH_SERVER_IP }}
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ vars.SSH_SERVER_IP }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H $SSH_SERVER_IP >> ~/.ssh/known_hosts
 
       - name: Deploy to Production
         run: |
           # Sync frontend build
-          rsync -avz --delete ./fe/dist/ root@${{ vars.SSH_SERVER_IP }}:/opt/webfly/nextgen/fe/dist/
+          rsync -avz --delete ./fe/dist/ root@${{ vars.SSH_SERVER_IP }}:/opt/nextgen/fe/dist/
           
           # Sync backend
-          rsync -avz --delete --exclude 'node_modules' --exclude '.env' ./be/ root@${{ vars.SSH_SERVER_IP }}:/opt/webfly/nextgen/be/
+          rsync -avz --delete --exclude 'node_modules' --exclude '.env' ./be/ root@${{ vars.SSH_SERVER_IP }}:/opt//nextgen/be/
 
       - name: Install Backend Dependencies & Restart Services
         run: |
           ssh root@${{ vars.SSH_SERVER_IP }} << 'EOF'
-            cd /opt/webfly/nextgen/be
+            cd /opt/nextgen/be
             npm ci --production
             pm2 restart sun
             systemctl restart nginx
