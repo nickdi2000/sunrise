@@ -1,125 +1,34 @@
 <template>
-  <!-- Loading State -->
-  <div v-if="isLoading" class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="text-center">
-      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
-      <p class="text-gray-600">Loading...</p>
-    </div>
-  </div>
-
-  <!-- Error State -->
-  <div v-else-if="error" class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="text-center">
-      <div class="text-red-600 mb-4">
-        <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <h2 class="text-xl font-semibold mb-2">Failed to load content</h2>
-        <p class="text-sm text-gray-600 mb-4">{{ error }}</p>
+  <PublicLayout>
+    <!-- Loading State -->
+    <div v-if="isLoading" class="min-h-screen flex items-center justify-center bg-gray-50">
+      <div class="text-center">
+        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+        <p class="text-gray-600">Loading...</p>
       </div>
-      <button 
-        @click="loadContent" 
-        class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-      >
-        Try Again
-      </button>
     </div>
-  </div>
 
-   <!-- Content Loaded -->
-   <div v-else>
-      <!-- Navigation -->
-      <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-4 px-6">
-        <div class="container mx-auto">
-          <div class="flex items-center justify-between">
-            <!-- Logo -->
-            <a href="/" class="flex items-center space-x-3 group">
-              <img 
-                src="/src/assets/images/evolve-logo.png"
-                :alt="content?.navigation?.logo?.alt || 'Logo'"
-                class="h-10 w-auto transition-transform group-hover:scale-105" 
-              />
-              <span class="text-xl font-semibold text-gray-900">
-                {{ content?.navigation?.logo?.text || 'Evolve Communities' }}
-              </span>
-            </a>
-
-            <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8">
-              <a 
-                v-for="link in (content?.navigation?.links || [])"
-                :key="link.text"
-                :href="link.href"
-                class="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                {{ link.text }}
-              </a>
-              
-              <!-- CTA Button -->
-              <a 
-                :href="content?.navigation?.cta?.href || '/contact'"
-                class="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105"
-              >
-                {{ content?.navigation?.cta?.text || 'Get Involved' }}
-              </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button 
-              class="md:hidden p-2 rounded-lg hover:bg-gray-100"
-              @click="isMobileMenuOpen = !isMobileMenuOpen"
-            >
-              <svg 
-                class="w-6 h-6" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  v-if="!isMobileMenuOpen"
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-                <path 
-                  v-else
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <!-- Mobile Menu -->
-          <div 
-            v-if="isMobileMenuOpen"
-            class="md:hidden mt-4 py-4 border-t border-gray-100"
-          >
-            <div class="flex flex-col space-y-4">
-              <a 
-                v-for="link in (content?.navigation?.links || [])"
-                :key="link.text"
-                :href="link.href"
-                class="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1"
-              >
-                {{ link.text }}
-              </a>
-              
-              <!-- Mobile CTA Button -->
-              <a 
-                :href="content?.navigation?.cta?.href || '#'"
-                class="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 text-center"
-              >
-                {{ content?.navigation?.cta?.text || 'Get Involved' }}
-              </a>
-            </div>
-          </div>
+    <!-- Error State -->
+    <div v-else-if="error" class="min-h-screen flex items-center justify-center bg-gray-50">
+      <div class="text-center">
+        <div class="text-red-600 mb-4">
+          <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h2 class="text-xl font-semibold mb-2">Failed to load content</h2>
+          <p class="text-sm text-gray-600 mb-4">{{ error }}</p>
         </div>
-      </nav>
+        <button 
+          @click="loadContent" 
+          class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Try Again
+        </button>
+      </div>
+    </div>
 
+    <!-- Content Loaded -->
+    <div v-else>
       <!-- Main content -->
       <main class="pt-20"><!-- Added padding-top to account for fixed nav -->
       <!-- Hero Section -->
@@ -332,33 +241,8 @@
         </div>
       </section>
     </main>
-    
-    <!-- Footer -->
-    <footer class="border-t border-gray-200 bg-white py-12 text-gray-600">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div class="flex items-center space-x-3">
-            <img :src="evolveLogo" alt="Evolve Communities Logo" class="h-10 w-auto" />
-            <div>
-              <p class="text-lg font-semibold text-gray-900">{{ content?.footer?.branding?.title || 'Evolve Communities' }}</p>
-              <p class="text-sm text-gray-500">{{ content?.footer?.branding?.tagline || 'Youth arts. Community. Confidence.' }}</p>
-            </div>
-          </div>
-          <div class="flex items-center space-x-4 text-sm">
-            <a 
-              v-for="link in (content?.footer?.quickLinks?.links || [])"
-              :key="link.text"
-              :href="link.href" 
-              class="transition hover:text-gray-900"
-            >
-              {{ link.text }}
-            </a>
-          </div>
-          <p class="text-xs text-gray-500">&copy; {{ currentYear }} {{ content?.footer?.branding?.title || 'Evolve Communities' }}. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </PublicLayout>
 </template>
 
 <script setup>
@@ -368,14 +252,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { getContent } from '../api/api';
 import stageImage from '../assets/images/stage.png';
-import evolveLogo from '../assets/images/evolve-logo.png';
+import PublicLayout from '../components/PublicLayout.vue';
 
 // Simple reactive state - no complex injection needed
 const content = ref(null);
 const isLoading = ref(true);
 const error = ref(null);
-const currentYear = new Date().getFullYear();
-const isMobileMenuOpen = ref(false);
 
 // Parallax effect
 const parallaxContainer = ref(null);

@@ -1,593 +1,1078 @@
-2025-10-23T09:30:39: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
-2025-10-23T09:30:39: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
-2025-10-23T09:30:39: [DEBUG] Attempting MongoDB connection...
-2025-10-23T09:30:39: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T09:30:39: [DEBUG] Creating MongoDB client...
-2025-10-23T09:30:39: [DEBUG] Attempting to connect...
-2025-10-23T09:30:39: [DEBUG] Running ping command...
-2025-10-23T09:30:39: [SUCCESS] Connected to MongoDB
-2025-10-23T09:30:39: [DEBUG] Successfully tested content collection access
-2025-10-23T09:30:39: API listening on port 3033
-2025-10-23T09:31:20: [DEBUG] GET /api/content {
-2025-10-23T09:31:20:   headers: {
-2025-10-23T09:31:20:     host: 'localhost:3033',
-2025-10-23T09:31:20:     connection: 'keep-alive',
-2025-10-23T09:31:20:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T09:31:20:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T09:31:20:     accept: 'application/json, text/plain, */*',
-2025-10-23T09:31:20:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T09:31:20:     'sec-ch-ua-mobile': '?0',
-2025-10-23T09:31:20:     origin: 'http://localhost:5144',
-2025-10-23T09:31:20:     'sec-fetch-site': 'same-site',
-2025-10-23T09:31:20:     'sec-fetch-mode': 'cors',
-2025-10-23T09:31:20:     'sec-fetch-dest': 'empty',
-2025-10-23T09:31:20:     referer: 'http://localhost:5144/',
-2025-10-23T09:31:20:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T09:31:20:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T09:31:20:     'if-none-match': 'W/"c8a-uO0SMWaiTWyTD7fMEYIshYxR8uA"'
-2025-10-23T09:31:20:   },
-2025-10-23T09:31:20:   body: undefined
-2025-10-23T09:31:20: }
-2025-10-23T09:31:20: [gen0wo][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T09:31:20: [gen0wo][DEBUG] Attempting to find content document...
-2025-10-23T09:31:20: [gen0wo][INFO] Content retrieved successfully
-2025-10-23T09:33:34: [DEBUG] GET /api/content {
-2025-10-23T09:33:34:   headers: {
-2025-10-23T09:33:34:     host: 'localhost:3033',
-2025-10-23T09:33:34:     connection: 'keep-alive',
-2025-10-23T09:33:34:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T09:33:34:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T09:33:34:     accept: 'application/json, text/plain, */*',
-2025-10-23T09:33:34:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T09:33:34:     'sec-ch-ua-mobile': '?0',
-2025-10-23T09:33:34:     origin: 'http://localhost:5144',
-2025-10-23T09:33:34:     'sec-fetch-site': 'same-site',
-2025-10-23T09:33:34:     'sec-fetch-mode': 'cors',
-2025-10-23T09:33:34:     'sec-fetch-dest': 'empty',
-2025-10-23T09:33:34:     referer: 'http://localhost:5144/',
-2025-10-23T09:33:34:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T09:33:34:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T09:33:34:     'if-none-match': 'W/"c8a-E/BhmN1EzEuJ/4UwqngktDdR1aQ"'
-2025-10-23T09:33:34:   },
-2025-10-23T09:33:34:   body: undefined
-2025-10-23T09:33:34: }
-2025-10-23T09:33:34: [2wnhwh][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T09:33:34: [2wnhwh][DEBUG] Attempting to find content document...
-2025-10-23T09:33:34: [2wnhwh][INFO] Content retrieved successfully
-2025-10-23T10:01:25: [INFO] Disconnected from MongoDB
-2025-10-23T10:01:26: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  enable debug logging with { debug: true }
-2025-10-23T10:01:26: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
-2025-10-23T10:01:26: [DEBUG] Attempting MongoDB connection...
-2025-10-23T10:01:26: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T10:01:26: [DEBUG] Creating MongoDB client...
-2025-10-23T10:01:26: [DEBUG] Attempting to connect...
-2025-10-23T10:01:26: [DEBUG] Running ping command...
-2025-10-23T10:01:26: [SUCCESS] Connected to MongoDB
-2025-10-23T10:01:26: [DEBUG] Successfully tested content collection access
-2025-10-23T10:01:26: API listening on port 3033
-2025-10-23T10:01:27: [INFO] Disconnected from MongoDB
-2025-10-23T10:01:28: [dotenv@17.2.2] injecting env (2) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
-2025-10-23T10:01:28: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
-2025-10-23T10:01:28: [DEBUG] Attempting MongoDB connection...
-2025-10-23T10:01:28: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T10:01:28: [DEBUG] Creating MongoDB client...
-2025-10-23T10:01:28: [DEBUG] Attempting to connect...
-2025-10-23T10:01:28: [DEBUG] Running ping command...
-2025-10-23T10:01:28: [SUCCESS] Connected to MongoDB
-2025-10-23T10:01:28: [DEBUG] Successfully tested content collection access
-2025-10-23T10:01:28: API listening on port 3033
-2025-10-23T10:01:28: [INFO] Disconnected from MongoDB
-2025-10-23T10:01:29: [dotenv@17.2.2] injecting env (2) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
-2025-10-23T10:01:29: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
-2025-10-23T10:01:29: [DEBUG] Attempting MongoDB connection...
-2025-10-23T10:01:29: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T10:01:29: [DEBUG] Creating MongoDB client...
-2025-10-23T10:01:29: [DEBUG] Attempting to connect...
-2025-10-23T10:01:29: [DEBUG] Running ping command...
-2025-10-23T10:01:29: [SUCCESS] Connected to MongoDB
-2025-10-23T10:01:29: [DEBUG] Successfully tested content collection access
-2025-10-23T10:01:29: API listening on port 3033
-2025-10-23T10:01:30: [INFO] Disconnected from MongoDB
-2025-10-23T10:01:30: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
-2025-10-23T10:01:30: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
-2025-10-23T10:01:30: [DEBUG] Attempting MongoDB connection...
-2025-10-23T10:01:30: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T10:01:30: [DEBUG] Creating MongoDB client...
-2025-10-23T10:01:30: [DEBUG] Attempting to connect...
-2025-10-23T10:01:30: [DEBUG] Running ping command...
-2025-10-23T10:01:30: [SUCCESS] Connected to MongoDB
-2025-10-23T10:01:30: [DEBUG] Successfully tested content collection access
-2025-10-23T10:01:30: API listening on port 3033
-2025-10-23T10:02:23: [DEBUG] GET /api/content {
-2025-10-23T10:02:23:   headers: {
-2025-10-23T10:02:23:     host: 'localhost:3033',
-2025-10-23T10:02:23:     connection: 'keep-alive',
-2025-10-23T10:02:23:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:02:23:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:02:23:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:02:23:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:02:23:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:02:23:     origin: 'http://localhost:5144',
-2025-10-23T10:02:23:     'sec-fetch-site': 'same-site',
-2025-10-23T10:02:23:     'sec-fetch-mode': 'cors',
-2025-10-23T10:02:23:     'sec-fetch-dest': 'empty',
-2025-10-23T10:02:23:     referer: 'http://localhost:5144/',
-2025-10-23T10:02:23:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:02:23:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T10:02:23:     'if-none-match': 'W/"c8a-GQiFAbwqW1KI5z8WO256HflCErg"'
-2025-10-23T10:02:23:   },
-2025-10-23T10:02:23:   body: undefined
-2025-10-23T10:02:23: }
-2025-10-23T10:02:23: [xelojo][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:02:23: [xelojo][DEBUG] Attempting to find content document...
-2025-10-23T10:02:23: [xelojo][INFO] Content retrieved successfully
-2025-10-23T10:02:44: [INFO] Disconnected from MongoDB
-2025-10-23T10:02:45: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
-2025-10-23T10:02:45: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
-2025-10-23T10:02:45: [DEBUG] Attempting MongoDB connection...
-2025-10-23T10:02:45: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T10:02:45: [DEBUG] Creating MongoDB client...
-2025-10-23T10:02:45: [DEBUG] Attempting to connect...
-2025-10-23T10:02:45: [DEBUG] Running ping command...
-2025-10-23T10:02:45: [SUCCESS] Connected to MongoDB
-2025-10-23T10:02:45: [DEBUG] Successfully tested content collection access
-2025-10-23T10:02:45: API listening on port 3033
-2025-10-23T10:03:41: [INFO] Disconnected from MongoDB
-2025-10-23T10:03:42: [dotenv@17.2.2] injecting env (2) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
-2025-10-23T10:03:42: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
-2025-10-23T10:03:42: [DEBUG] Attempting MongoDB connection...
-2025-10-23T10:03:42: [DEBUG] MongoDB URL configured: Yes
-2025-10-23T10:03:42: [DEBUG] Creating MongoDB client...
-2025-10-23T10:03:42: [DEBUG] Attempting to connect...
-2025-10-23T10:03:42: [DEBUG] Running ping command...
-2025-10-23T10:03:42: [SUCCESS] Connected to MongoDB
-2025-10-23T10:03:42: [DEBUG] Successfully tested content collection access
-2025-10-23T10:03:42: API listening on port 3033
-2025-10-23T10:18:57: [DEBUG] GET /api/content {
-2025-10-23T10:18:57:   headers: {
-2025-10-23T10:18:57:     host: 'localhost:3033',
-2025-10-23T10:18:57:     connection: 'keep-alive',
-2025-10-23T10:18:57:     pragma: 'no-cache',
-2025-10-23T10:18:57:     'cache-control': 'no-cache',
-2025-10-23T10:18:57:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:18:57:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:18:57:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:18:57:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:18:57:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:18:57:     origin: 'http://localhost:5144',
-2025-10-23T10:18:57:     'sec-fetch-site': 'same-site',
-2025-10-23T10:18:57:     'sec-fetch-mode': 'cors',
-2025-10-23T10:18:57:     'sec-fetch-dest': 'empty',
-2025-10-23T10:18:57:     referer: 'http://localhost:5144/',
-2025-10-23T10:18:57:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:18:57:     'accept-language': 'en-US,en;q=0.9'
-2025-10-23T10:18:57:   },
-2025-10-23T10:18:57:   body: undefined
-2025-10-23T10:18:57: }
-2025-10-23T10:18:57: [ekxton][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:18:57: [ekxton][DEBUG] Attempting to find content document...
-2025-10-23T10:18:57: [ekxton][INFO] Content retrieved successfully
-2025-10-23T10:19:39: [DEBUG] GET /api/content {
-2025-10-23T10:19:39:   headers: {
-2025-10-23T10:19:39:     host: 'localhost:3033',
-2025-10-23T10:19:39:     connection: 'keep-alive',
-2025-10-23T10:19:39:     pragma: 'no-cache',
-2025-10-23T10:19:39:     'cache-control': 'no-cache',
-2025-10-23T10:19:39:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:19:39:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:19:39:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:19:39:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:19:39:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:19:39:     origin: 'http://localhost:5144',
-2025-10-23T10:19:39:     'sec-fetch-site': 'same-site',
-2025-10-23T10:19:39:     'sec-fetch-mode': 'cors',
-2025-10-23T10:19:39:     'sec-fetch-dest': 'empty',
-2025-10-23T10:19:39:     referer: 'http://localhost:5144/',
-2025-10-23T10:19:39:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:19:39:     'accept-language': 'en-US,en;q=0.9'
-2025-10-23T10:19:39:   },
-2025-10-23T10:19:39:   body: undefined
-2025-10-23T10:19:39: }
-2025-10-23T10:19:39: [pn2cxr][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:19:39: [pn2cxr][DEBUG] Attempting to find content document...
-2025-10-23T10:19:39: [pn2cxr][INFO] Content retrieved successfully
-2025-10-23T10:19:41: [DEBUG] GET /api/content {
-2025-10-23T10:19:41:   headers: {
-2025-10-23T10:19:41:     host: 'localhost:3033',
-2025-10-23T10:19:41:     connection: 'keep-alive',
-2025-10-23T10:19:41:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:19:41:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:19:41:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:19:41:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:19:41:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:19:41:     origin: 'http://localhost:5144',
-2025-10-23T10:19:41:     'sec-fetch-site': 'same-site',
-2025-10-23T10:19:41:     'sec-fetch-mode': 'cors',
-2025-10-23T10:19:41:     'sec-fetch-dest': 'empty',
-2025-10-23T10:19:41:     referer: 'http://localhost:5144/',
-2025-10-23T10:19:41:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:19:41:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T10:19:41:     'if-none-match': 'W/"c8a-6zL69TwSHUKMhwiS7pt55qB+wsk"'
-2025-10-23T10:19:41:   },
-2025-10-23T10:19:41:   body: undefined
-2025-10-23T10:19:41: }
-2025-10-23T10:19:41: [35bn98][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:19:41: [35bn98][DEBUG] Attempting to find content document...
-2025-10-23T10:19:41: [35bn98][INFO] Content retrieved successfully
-2025-10-23T10:20:49: [DEBUG] GET /api/content {
-2025-10-23T10:20:49:   headers: {
-2025-10-23T10:20:49:     host: 'localhost:3033',
-2025-10-23T10:20:49:     connection: 'keep-alive',
-2025-10-23T10:20:49:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:20:49:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:20:49:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:20:49:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:20:49:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:20:49:     origin: 'http://localhost:5144',
-2025-10-23T10:20:49:     'sec-fetch-site': 'same-site',
-2025-10-23T10:20:49:     'sec-fetch-mode': 'cors',
-2025-10-23T10:20:49:     'sec-fetch-dest': 'empty',
-2025-10-23T10:20:49:     referer: 'http://localhost:5144/',
-2025-10-23T10:20:49:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:20:49:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T10:20:49:     'if-none-match': 'W/"c8a-BdXeAB0JKJFTbvv97UBBHO+GW10"'
-2025-10-23T10:20:49:   },
-2025-10-23T10:20:49:   body: undefined
-2025-10-23T10:20:49: }
-2025-10-23T10:20:49: [x7tqk8][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:20:49: [x7tqk8][DEBUG] Attempting to find content document...
-2025-10-23T10:20:49: [x7tqk8][INFO] Content retrieved successfully
-2025-10-23T10:20:50: [DEBUG] GET /api/content {
-2025-10-23T10:20:50:   headers: {
-2025-10-23T10:20:50:     host: 'localhost:3033',
-2025-10-23T10:20:50:     connection: 'keep-alive',
-2025-10-23T10:20:50:     pragma: 'no-cache',
-2025-10-23T10:20:50:     'cache-control': 'no-cache',
-2025-10-23T10:20:50:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:20:50:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:20:50:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:20:50:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:20:50:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:20:50:     origin: 'http://localhost:5144',
-2025-10-23T10:20:50:     'sec-fetch-site': 'same-site',
-2025-10-23T10:20:50:     'sec-fetch-mode': 'cors',
-2025-10-23T10:20:50:     'sec-fetch-dest': 'empty',
-2025-10-23T10:20:50:     referer: 'http://localhost:5144/',
-2025-10-23T10:20:50:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:20:50:     'accept-language': 'en-US,en;q=0.9'
-2025-10-23T10:20:50:   },
-2025-10-23T10:20:50:   body: undefined
-2025-10-23T10:20:50: }
-2025-10-23T10:20:50: [ed4its][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:20:50: [ed4its][DEBUG] Attempting to find content document...
-2025-10-23T10:20:50: [ed4its][INFO] Content retrieved successfully
-2025-10-23T10:25:03: [DEBUG] GET /api/content {
-2025-10-23T10:25:03:   headers: {
-2025-10-23T10:25:03:     host: 'localhost:3033',
-2025-10-23T10:25:03:     connection: 'keep-alive',
-2025-10-23T10:25:03:     pragma: 'no-cache',
-2025-10-23T10:25:03:     'cache-control': 'no-cache',
-2025-10-23T10:25:03:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:25:03:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:25:03:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:25:03:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:25:03:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:25:03:     origin: 'http://localhost:5144',
-2025-10-23T10:25:03:     'sec-fetch-site': 'same-site',
-2025-10-23T10:25:03:     'sec-fetch-mode': 'cors',
-2025-10-23T10:25:03:     'sec-fetch-dest': 'empty',
-2025-10-23T10:25:03:     referer: 'http://localhost:5144/',
-2025-10-23T10:25:03:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:25:03:     'accept-language': 'en-US,en;q=0.9'
-2025-10-23T10:25:03:   },
-2025-10-23T10:25:03:   body: undefined
-2025-10-23T10:25:03: }
-2025-10-23T10:25:03: [04stinm][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:25:03: [04stinm][DEBUG] Attempting to find content document...
-2025-10-23T10:25:03: [04stinm][INFO] Content retrieved successfully
-2025-10-23T10:49:53: [DEBUG] GET /api/content {
-2025-10-23T10:49:53:   headers: {
-2025-10-23T10:49:53:     host: 'localhost:3033',
-2025-10-23T10:49:53:     connection: 'keep-alive',
-2025-10-23T10:49:53:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:49:53:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:49:53:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:49:53:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:49:53:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:49:53:     origin: 'http://localhost:5144',
-2025-10-23T10:49:53:     'sec-fetch-site': 'same-site',
-2025-10-23T10:49:53:     'sec-fetch-mode': 'cors',
-2025-10-23T10:49:53:     'sec-fetch-dest': 'empty',
-2025-10-23T10:49:53:     referer: 'http://localhost:5144/',
-2025-10-23T10:49:53:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:49:53:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T10:49:53:     'if-none-match': 'W/"c8a-LNa7bZi/R4I3qIC25glMjZZLaE8"'
-2025-10-23T10:49:53:   },
-2025-10-23T10:49:53:   body: undefined
-2025-10-23T10:49:53: }
-2025-10-23T10:49:53: [wsjcc][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:49:53: [wsjcc][DEBUG] Attempting to find content document...
-2025-10-23T10:49:53: [wsjcc][INFO] Content retrieved successfully
-2025-10-23T10:52:23: [DEBUG] GET /api/content {
-2025-10-23T10:52:23:   headers: {
-2025-10-23T10:52:23:     host: 'localhost:3033',
-2025-10-23T10:52:23:     connection: 'keep-alive',
-2025-10-23T10:52:23:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T10:52:23:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T10:52:23:     accept: 'application/json, text/plain, */*',
-2025-10-23T10:52:23:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T10:52:23:     'sec-ch-ua-mobile': '?0',
-2025-10-23T10:52:23:     origin: 'http://localhost:5144',
-2025-10-23T10:52:23:     'sec-fetch-site': 'same-site',
-2025-10-23T10:52:23:     'sec-fetch-mode': 'cors',
-2025-10-23T10:52:23:     'sec-fetch-dest': 'empty',
-2025-10-23T10:52:23:     referer: 'http://localhost:5144/',
-2025-10-23T10:52:23:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T10:52:23:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T10:52:23:     'if-none-match': 'W/"c8a-f0utIuyUm327I0C59j7z52jrACo"'
-2025-10-23T10:52:23:   },
-2025-10-23T10:52:23:   body: undefined
-2025-10-23T10:52:23: }
-2025-10-23T10:52:23: [0e9rcr][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T10:52:23: [0e9rcr][DEBUG] Attempting to find content document...
-2025-10-23T10:52:23: [0e9rcr][INFO] Content retrieved successfully
-2025-10-23T14:34:25: [DEBUG] GET /api/content {
-2025-10-23T14:34:25:   headers: {
-2025-10-23T14:34:25:     host: 'localhost:3033',
-2025-10-23T14:34:25:     connection: 'keep-alive',
-2025-10-23T14:34:25:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:34:25:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:34:25:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:34:25:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:34:25:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:34:25:     origin: 'http://localhost:5144',
-2025-10-23T14:34:25:     'sec-fetch-site': 'same-site',
-2025-10-23T14:34:25:     'sec-fetch-mode': 'cors',
-2025-10-23T14:34:25:     'sec-fetch-dest': 'empty',
-2025-10-23T14:34:25:     referer: 'http://localhost:5144/',
-2025-10-23T14:34:25:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:34:25:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:34:25:     'if-none-match': 'W/"c8a-lqmM/Nxn1ExRWfTqlwm2in1bCbE"'
-2025-10-23T14:34:25:   },
-2025-10-23T14:34:25:   body: undefined
-2025-10-23T14:34:25: }
-2025-10-23T14:34:25: [p96ojk][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:34:25: [p96ojk][DEBUG] Attempting to find content document...
-2025-10-23T14:34:25: [p96ojk][INFO] Content retrieved successfully
-2025-10-23T14:40:59: [DEBUG] GET /api/content {
-2025-10-23T14:40:59:   headers: {
-2025-10-23T14:40:59:     host: 'localhost:3033',
-2025-10-23T14:40:59:     connection: 'keep-alive',
-2025-10-23T14:40:59:     'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
-2025-10-23T14:40:59:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:40:59:     origin: 'http://localhost:5144',
-2025-10-23T14:40:59:     'sec-fetch-site': 'same-site',
-2025-10-23T14:40:59:     'sec-fetch-mode': 'cors',
-2025-10-23T14:40:59:     'sec-fetch-dest': 'empty',
-2025-10-23T14:40:59:     referer: 'http://localhost:5144/',
-2025-10-23T14:40:59:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:40:59:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:40:59:     'if-none-match': 'W/"c8a-7dYRQLn8ADbRyIY/l96qZnngVeE"'
-2025-10-23T14:40:59:   },
-2025-10-23T14:40:59:   body: undefined
-2025-10-23T14:40:59: }
-2025-10-23T14:40:59: [vfz2hp][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:40:59: [vfz2hp][DEBUG] Attempting to find content document...
-2025-10-23T14:40:59: [vfz2hp][INFO] Content retrieved successfully
-2025-10-23T14:43:00: [DEBUG] GET /api/content {
-2025-10-23T14:43:00:   headers: {
-2025-10-23T14:43:00:     host: 'localhost:3033',
-2025-10-23T14:43:00:     connection: 'keep-alive',
-2025-10-23T14:43:00:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:43:00:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:43:00:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:43:00:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:43:00:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:43:00:     origin: 'http://localhost:5144',
-2025-10-23T14:43:00:     'sec-fetch-site': 'same-site',
-2025-10-23T14:43:00:     'sec-fetch-mode': 'cors',
-2025-10-23T14:43:00:     'sec-fetch-dest': 'empty',
-2025-10-23T14:43:00:     referer: 'http://localhost:5144/',
-2025-10-23T14:43:00:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:43:00:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:43:00:     'if-none-match': 'W/"c8a-Lpm01G0tQxKvJfrugx0zq24aqsg"'
-2025-10-23T14:43:00:   },
-2025-10-23T14:43:00:   body: undefined
-2025-10-23T14:43:00: }
-2025-10-23T14:43:00: [kqe7l][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:43:00: [kqe7l][DEBUG] Attempting to find content document...
-2025-10-23T14:43:00: [kqe7l][INFO] Content retrieved successfully
-2025-10-23T14:43:01: [DEBUG] GET /api/content {
-2025-10-23T14:43:01:   headers: {
-2025-10-23T14:43:01:     host: 'localhost:3033',
-2025-10-23T14:43:01:     connection: 'keep-alive',
-2025-10-23T14:43:01:     pragma: 'no-cache',
-2025-10-23T14:43:01:     'cache-control': 'no-cache',
-2025-10-23T14:43:01:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:43:01:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:43:01:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:43:01:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:43:01:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:43:01:     origin: 'http://localhost:5144',
-2025-10-23T14:43:01:     'sec-fetch-site': 'same-site',
-2025-10-23T14:43:01:     'sec-fetch-mode': 'cors',
-2025-10-23T14:43:01:     'sec-fetch-dest': 'empty',
-2025-10-23T14:43:01:     referer: 'http://localhost:5144/',
-2025-10-23T14:43:01:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:43:01:     'accept-language': 'en-US,en;q=0.9'
-2025-10-23T14:43:01:   },
-2025-10-23T14:43:01:   body: undefined
-2025-10-23T14:43:01: }
-2025-10-23T14:43:01: [k1cgvg][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:43:01: [k1cgvg][DEBUG] Attempting to find content document...
-2025-10-23T14:43:01: [k1cgvg][INFO] Content retrieved successfully
-2025-10-23T14:43:37: [DEBUG] GET /api/content {
-2025-10-23T14:43:37:   headers: {
-2025-10-23T14:43:37:     host: 'localhost:3033',
-2025-10-23T14:43:37:     connection: 'keep-alive',
-2025-10-23T14:43:37:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:43:37:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:43:37:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:43:37:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:43:37:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:43:37:     origin: 'http://localhost:5144',
-2025-10-23T14:43:37:     'sec-fetch-site': 'same-site',
-2025-10-23T14:43:37:     'sec-fetch-mode': 'cors',
-2025-10-23T14:43:37:     'sec-fetch-dest': 'empty',
-2025-10-23T14:43:37:     referer: 'http://localhost:5144/',
-2025-10-23T14:43:37:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:43:37:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:43:37:     'if-none-match': 'W/"c8a-faiJpdAsd0n8TCkibKTReOoCYhg"'
-2025-10-23T14:43:37:   },
-2025-10-23T14:43:37:   body: undefined
-2025-10-23T14:43:37: }
-2025-10-23T14:43:37: [3o4iz][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:43:37: [3o4iz][DEBUG] Attempting to find content document...
-2025-10-23T14:43:37: [3o4iz][INFO] Content retrieved successfully
-2025-10-23T14:43:51: [DEBUG] GET /api/content {
-2025-10-23T14:43:51:   headers: {
-2025-10-23T14:43:51:     host: 'localhost:3033',
-2025-10-23T14:43:51:     connection: 'keep-alive',
-2025-10-23T14:43:51:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:43:51:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:43:51:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:43:51:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:43:51:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:43:51:     origin: 'http://localhost:5144',
-2025-10-23T14:43:51:     'sec-fetch-site': 'same-site',
-2025-10-23T14:43:51:     'sec-fetch-mode': 'cors',
-2025-10-23T14:43:51:     'sec-fetch-dest': 'empty',
-2025-10-23T14:43:51:     referer: 'http://localhost:5144/',
-2025-10-23T14:43:51:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:43:51:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:43:51:     'if-none-match': 'W/"c8a-sOkKJVkwdPKF4BsOqFIN3xXsFMw"'
-2025-10-23T14:43:51:   },
-2025-10-23T14:43:51:   body: undefined
-2025-10-23T14:43:51: }
-2025-10-23T14:43:51: [sz8cog][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:43:51: [sz8cog][DEBUG] Attempting to find content document...
-2025-10-23T14:43:51: [sz8cog][INFO] Content retrieved successfully
-2025-10-23T14:44:40: [DEBUG] GET /api/content {
-2025-10-23T14:44:40:   headers: {
-2025-10-23T14:44:40:     host: 'localhost:3033',
-2025-10-23T14:44:40:     connection: 'keep-alive',
-2025-10-23T14:44:40:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:44:40:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:44:40:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:44:40:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:44:40:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:44:40:     origin: 'http://localhost:5144',
-2025-10-23T14:44:40:     'sec-fetch-site': 'same-site',
-2025-10-23T14:44:40:     'sec-fetch-mode': 'cors',
-2025-10-23T14:44:40:     'sec-fetch-dest': 'empty',
-2025-10-23T14:44:40:     referer: 'http://localhost:5144/',
-2025-10-23T14:44:40:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:44:40:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:44:40:     'if-none-match': 'W/"c8a-hX/a58z9IO4BzHAIwViwYZDbhg8"'
-2025-10-23T14:44:40:   },
-2025-10-23T14:44:40:   body: undefined
-2025-10-23T14:44:40: }
-2025-10-23T14:44:40: [3j4n3][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:44:40: [3j4n3][DEBUG] Attempting to find content document...
-2025-10-23T14:44:40: [3j4n3][INFO] Content retrieved successfully
-2025-10-23T14:45:17: [DEBUG] GET /api/content {
-2025-10-23T14:45:17:   headers: {
-2025-10-23T14:45:17:     host: 'localhost:3033',
-2025-10-23T14:45:17:     connection: 'keep-alive',
-2025-10-23T14:45:17:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:45:17:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:45:17:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:45:17:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:45:17:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:45:17:     origin: 'http://localhost:5144',
-2025-10-23T14:45:17:     'sec-fetch-site': 'same-site',
-2025-10-23T14:45:17:     'sec-fetch-mode': 'cors',
-2025-10-23T14:45:17:     'sec-fetch-dest': 'empty',
-2025-10-23T14:45:17:     referer: 'http://localhost:5144/',
-2025-10-23T14:45:17:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:45:17:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:45:17:     'if-none-match': 'W/"c8a-mc+VLh5wMhyFb9aC5UnNqQMuSZw"'
-2025-10-23T14:45:17:   },
-2025-10-23T14:45:17:   body: undefined
-2025-10-23T14:45:17: }
-2025-10-23T14:45:17: [f7sltp][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:45:17: [f7sltp][DEBUG] Attempting to find content document...
-2025-10-23T14:45:17: [f7sltp][INFO] Content retrieved successfully
-2025-10-23T14:45:17: [DEBUG] GET /api/content {
-2025-10-23T14:45:17:   headers: {
-2025-10-23T14:45:17:     host: 'localhost:3033',
-2025-10-23T14:45:17:     connection: 'keep-alive',
-2025-10-23T14:45:17:     'sec-ch-ua-platform': '"macOS"',
-2025-10-23T14:45:17:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-23T14:45:17:     accept: 'application/json, text/plain, */*',
-2025-10-23T14:45:17:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-23T14:45:17:     'sec-ch-ua-mobile': '?0',
-2025-10-23T14:45:17:     origin: 'http://localhost:5144',
-2025-10-23T14:45:17:     'sec-fetch-site': 'same-site',
-2025-10-23T14:45:17:     'sec-fetch-mode': 'cors',
-2025-10-23T14:45:17:     'sec-fetch-dest': 'empty',
-2025-10-23T14:45:17:     referer: 'http://localhost:5144/',
-2025-10-23T14:45:17:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-23T14:45:17:     'accept-language': 'en-US,en;q=0.9',
-2025-10-23T14:45:17:     'if-none-match': 'W/"c8a-F+uWe9+nviXNwnmbX7kchfJImdU"'
-2025-10-23T14:45:17:   },
-2025-10-23T14:45:17:   body: undefined
-2025-10-23T14:45:17: }
-2025-10-23T14:45:17: [o3uf5l][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-23T14:45:17: [o3uf5l][DEBUG] Attempting to find content document...
-2025-10-23T14:45:17: [o3uf5l][INFO] Content retrieved successfully
-2025-10-28T07:15:17: [DEBUG] GET /api/content {
-2025-10-28T07:15:17:   headers: {
-2025-10-28T07:15:17:     host: 'localhost:3033',
-2025-10-28T07:15:17:     connection: 'keep-alive',
-2025-10-28T07:15:17:     'sec-ch-ua-platform': '"macOS"',
-2025-10-28T07:15:17:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
-2025-10-28T07:15:17:     accept: 'application/json, text/plain, */*',
-2025-10-28T07:15:17:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
-2025-10-28T07:15:17:     'sec-ch-ua-mobile': '?0',
-2025-10-28T07:15:17:     origin: 'http://localhost:5144',
-2025-10-28T07:15:17:     'sec-fetch-site': 'same-site',
-2025-10-28T07:15:17:     'sec-fetch-mode': 'cors',
-2025-10-28T07:15:17:     'sec-fetch-dest': 'empty',
-2025-10-28T07:15:17:     referer: 'http://localhost:5144/',
-2025-10-28T07:15:17:     'accept-encoding': 'gzip, deflate, br, zstd',
-2025-10-28T07:15:17:     'accept-language': 'en-US,en;q=0.9'
-2025-10-28T07:15:17:   },
-2025-10-28T07:15:17:   body: undefined
-2025-10-28T07:15:17: }
-2025-10-28T07:15:17: [bonsr4][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
-2025-10-28T07:15:17: [bonsr4][DEBUG] Attempting to find content document...
-2025-10-28T07:15:17: [bonsr4][INFO] Content retrieved successfully
-2025-10-28T07:16:47: [INFO] Disconnected from MongoDB
-2025-10-28T07:16:48: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  enable debug logging with { debug: true }
-2025-10-28T07:16:48: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
-2025-10-28T07:16:48: [DEBUG] Attempting MongoDB connection...
-2025-10-28T07:16:48: [DEBUG] MongoDB URL configured: Yes
-2025-10-28T07:16:48: [DEBUG] Creating MongoDB client...
-2025-10-28T07:16:48: [DEBUG] Attempting to connect...
-2025-10-28T07:16:48: [DEBUG] Running ping command...
-2025-10-28T07:16:48: [SUCCESS] Connected to MongoDB
-2025-10-28T07:16:48: [DEBUG] Successfully tested content collection access
-2025-10-28T07:16:48: API listening on port 3033
-2025-10-28T07:16:58: [INFO] Disconnected from MongoDB
-2025-10-28T07:16:59: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
-2025-10-28T07:16:59: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
-2025-10-28T07:16:59: [DEBUG] Attempting MongoDB connection...
-2025-10-28T07:16:59: [DEBUG] MongoDB URL configured: Yes
-2025-10-28T07:16:59: [DEBUG] Creating MongoDB client...
-2025-10-28T07:16:59: [DEBUG] Attempting to connect...
-2025-10-28T07:16:59: [DEBUG] Running ping command...
-2025-10-28T07:16:59: [SUCCESS] Connected to MongoDB
-2025-10-28T07:16:59: [DEBUG] Successfully tested content collection access
-2025-10-28T07:16:59: API listening on port 3033
-2025-10-28T07:17:04: [INFO] Disconnected from MongoDB
-2025-10-28T07:17:04: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
-2025-10-28T07:17:04: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
-2025-10-28T07:17:04: [DEBUG] Attempting MongoDB connection...
-2025-10-28T07:17:04: [DEBUG] MongoDB URL configured: Yes
-2025-10-28T07:17:04: [DEBUG] Creating MongoDB client...
-2025-10-28T07:17:04: [DEBUG] Attempting to connect...
-2025-10-28T07:17:04: [DEBUG] Running ping command...
-2025-10-28T07:17:04: [SUCCESS] Connected to MongoDB
-2025-10-28T07:17:04: [DEBUG] Successfully tested content collection access
-2025-10-28T07:17:04: API listening on port 3033
+2025-11-05T09:04:08: [INFO] Disconnected from MongoDB
+2025-11-09T06:33:12: [dotenv@17.2.2] injecting env (2) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+2025-11-09T06:33:12: [dotenv@17.2.2] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2025-11-09T06:33:12: [DEBUG] Attempting MongoDB connection...
+2025-11-09T06:33:12: [DEBUG] MongoDB URL configured: Yes
+2025-11-09T06:33:12: [DEBUG] Creating MongoDB client...
+2025-11-09T06:33:12: [DEBUG] Attempting to connect...
+2025-11-09T06:33:12: [DEBUG] Running ping command...
+2025-11-09T06:33:12: [SUCCESS] Connected to MongoDB
+2025-11-09T06:33:12: [DEBUG] Successfully tested content collection access
+2025-11-09T06:33:12: API listening on port 3033
+2025-11-09T06:34:09: [DEBUG] GET /api/content {
+2025-11-09T06:34:09:   headers: {
+2025-11-09T06:34:09:     host: 'localhost:3033',
+2025-11-09T06:34:09:     connection: 'keep-alive',
+2025-11-09T06:34:09:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:34:09:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:34:09:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:34:09:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:34:09:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:34:09:     origin: 'http://localhost:5144',
+2025-11-09T06:34:09:     'sec-fetch-site': 'same-site',
+2025-11-09T06:34:09:     'sec-fetch-mode': 'cors',
+2025-11-09T06:34:09:     'sec-fetch-dest': 'empty',
+2025-11-09T06:34:09:     referer: 'http://localhost:5144/',
+2025-11-09T06:34:09:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:34:09:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:34:09:     'if-none-match': 'W/"c8a-oLY63Pdbg96hJCIeyyp3iSxsPcE"'
+2025-11-09T06:34:09:   },
+2025-11-09T06:34:09:   body: undefined
+2025-11-09T06:34:09: }
+2025-11-09T06:34:09: [x5sdus][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:34:09: [x5sdus][DEBUG] Attempting to find content document...
+2025-11-09T06:34:09: [x5sdus][INFO] Content retrieved successfully
+2025-11-09T06:34:30: [DEBUG] GET /api/content {
+2025-11-09T06:34:30:   headers: {
+2025-11-09T06:34:30:     host: 'localhost:3033',
+2025-11-09T06:34:30:     connection: 'keep-alive',
+2025-11-09T06:34:30:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:34:30:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:34:30:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:34:30:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:34:30:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:34:30:     origin: 'http://localhost:5144',
+2025-11-09T06:34:30:     'sec-fetch-site': 'same-site',
+2025-11-09T06:34:30:     'sec-fetch-mode': 'cors',
+2025-11-09T06:34:30:     'sec-fetch-dest': 'empty',
+2025-11-09T06:34:30:     referer: 'http://localhost:5144/',
+2025-11-09T06:34:30:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:34:30:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:34:30:     'if-none-match': 'W/"c8a-Ess6ttNNoXSYT2n5L4HQ7LmvNc4"'
+2025-11-09T06:34:30:   },
+2025-11-09T06:34:30:   body: undefined
+2025-11-09T06:34:30: }
+2025-11-09T06:34:30: [19l4a8][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:34:30: [19l4a8][DEBUG] Attempting to find content document...
+2025-11-09T06:34:30: [19l4a8][INFO] Content retrieved successfully
+2025-11-09T06:36:41: [DEBUG] GET /api/content {
+2025-11-09T06:36:41:   headers: {
+2025-11-09T06:36:41:     host: 'localhost:3033',
+2025-11-09T06:36:41:     connection: 'keep-alive',
+2025-11-09T06:36:41:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:36:41:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:36:41:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:36:41:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:36:41:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:36:41:     origin: 'http://localhost:5144',
+2025-11-09T06:36:41:     'sec-fetch-site': 'same-site',
+2025-11-09T06:36:41:     'sec-fetch-mode': 'cors',
+2025-11-09T06:36:41:     'sec-fetch-dest': 'empty',
+2025-11-09T06:36:41:     referer: 'http://localhost:5144/',
+2025-11-09T06:36:41:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:36:41:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:36:41:     'if-none-match': 'W/"c8a-qxRTn+LLMtElHTUHGgGoBQeekIE"'
+2025-11-09T06:36:41:   },
+2025-11-09T06:36:41:   body: undefined
+2025-11-09T06:36:41: }
+2025-11-09T06:36:41: [h0s4kz][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:36:41: [h0s4kz][DEBUG] Attempting to find content document...
+2025-11-09T06:36:41: [h0s4kz][INFO] Content retrieved successfully
+2025-11-09T06:36:51: [DEBUG] POST /api/auth/login {
+2025-11-09T06:36:51:   headers: {
+2025-11-09T06:36:51:     host: 'localhost:3033',
+2025-11-09T06:36:51:     connection: 'keep-alive',
+2025-11-09T06:36:51:     'content-length': '24',
+2025-11-09T06:36:51:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:36:51:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:36:51:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:36:51:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:36:51:     'content-type': 'application/json',
+2025-11-09T06:36:51:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:36:51:     origin: 'http://localhost:5144',
+2025-11-09T06:36:51:     'sec-fetch-site': 'same-site',
+2025-11-09T06:36:51:     'sec-fetch-mode': 'cors',
+2025-11-09T06:36:51:     'sec-fetch-dest': 'empty',
+2025-11-09T06:36:51:     referer: 'http://localhost:5144/',
+2025-11-09T06:36:51:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:36:51:     'accept-language': 'en-US,en;q=0.9'
+2025-11-09T06:36:51:   },
+2025-11-09T06:36:51:   body: { password: 'gorepando' }
+2025-11-09T06:36:51: }
+2025-11-09T06:36:51: [DEBUG] GET /api/content {
+2025-11-09T06:36:51:   headers: {
+2025-11-09T06:36:51:     host: 'localhost:3033',
+2025-11-09T06:36:51:     connection: 'keep-alive',
+2025-11-09T06:36:51:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:36:51:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:36:51:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:36:51:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:36:51:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:36:51:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:36:51:     origin: 'http://localhost:5144',
+2025-11-09T06:36:51:     'sec-fetch-site': 'same-site',
+2025-11-09T06:36:51:     'sec-fetch-mode': 'cors',
+2025-11-09T06:36:51:     'sec-fetch-dest': 'empty',
+2025-11-09T06:36:51:     referer: 'http://localhost:5144/',
+2025-11-09T06:36:51:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:36:51:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:36:51:     'if-none-match': 'W/"c8a-ChoZxWx1rovd2bLbT8wSsqRIfLY"'
+2025-11-09T06:36:51:   },
+2025-11-09T06:36:51:   body: undefined
+2025-11-09T06:36:51: }
+2025-11-09T06:36:51: [45m741][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:36:51: [45m741][DEBUG] Attempting to find content document...
+2025-11-09T06:36:51: [45m741][INFO] Content retrieved successfully
+2025-11-09T06:39:57: [DEBUG] GET /api/content {
+2025-11-09T06:39:57:   headers: {
+2025-11-09T06:39:57:     host: 'localhost:3033',
+2025-11-09T06:39:57:     connection: 'keep-alive',
+2025-11-09T06:39:57:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:39:57:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:39:57:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:39:57:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:39:57:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:39:57:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:39:57:     origin: 'http://localhost:5144',
+2025-11-09T06:39:57:     'sec-fetch-site': 'same-site',
+2025-11-09T06:39:57:     'sec-fetch-mode': 'cors',
+2025-11-09T06:39:57:     'sec-fetch-dest': 'empty',
+2025-11-09T06:39:57:     referer: 'http://localhost:5144/',
+2025-11-09T06:39:57:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:39:57:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:39:57:     'if-none-match': 'W/"c8a-jEhKic46n7tXC0bV1tvBusKfb6w"'
+2025-11-09T06:39:57:   },
+2025-11-09T06:39:57:   body: undefined
+2025-11-09T06:39:57: }
+2025-11-09T06:39:57: [103oi8][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:39:57: [103oi8][DEBUG] Attempting to find content document...
+2025-11-09T06:39:57: [103oi8][INFO] Content retrieved successfully
+2025-11-09T06:41:22: [DEBUG] GET /api/content {
+2025-11-09T06:41:22:   headers: {
+2025-11-09T06:41:22:     host: 'localhost:3033',
+2025-11-09T06:41:22:     connection: 'keep-alive',
+2025-11-09T06:41:22:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:41:22:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:41:22:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:41:22:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:41:22:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:41:22:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:41:22:     origin: 'http://localhost:5144',
+2025-11-09T06:41:22:     'sec-fetch-site': 'same-site',
+2025-11-09T06:41:22:     'sec-fetch-mode': 'cors',
+2025-11-09T06:41:22:     'sec-fetch-dest': 'empty',
+2025-11-09T06:41:22:     referer: 'http://localhost:5144/',
+2025-11-09T06:41:22:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:41:22:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:41:22:     'if-none-match': 'W/"c8a-Yqkper4hyZ5sfxoZIn99U+7He2o"'
+2025-11-09T06:41:22:   },
+2025-11-09T06:41:22:   body: undefined
+2025-11-09T06:41:22: }
+2025-11-09T06:41:22: [n91qa5][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:41:22: [n91qa5][DEBUG] Attempting to find content document...
+2025-11-09T06:41:22: [n91qa5][INFO] Content retrieved successfully
+2025-11-09T06:41:28: [DEBUG] GET /api/content {
+2025-11-09T06:41:28:   headers: {
+2025-11-09T06:41:28:     host: 'localhost:3033',
+2025-11-09T06:41:28:     connection: 'keep-alive',
+2025-11-09T06:41:28:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:41:28:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:41:28:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:41:28:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:41:28:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:41:28:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:41:28:     origin: 'http://localhost:5144',
+2025-11-09T06:41:28:     'sec-fetch-site': 'same-site',
+2025-11-09T06:41:28:     'sec-fetch-mode': 'cors',
+2025-11-09T06:41:28:     'sec-fetch-dest': 'empty',
+2025-11-09T06:41:28:     referer: 'http://localhost:5144/',
+2025-11-09T06:41:28:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:41:28:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:41:28:     'if-none-match': 'W/"c8a-a/ZsS3hDwTI8XUuoOp6QYAJKi/E"'
+2025-11-09T06:41:28:   },
+2025-11-09T06:41:28:   body: undefined
+2025-11-09T06:41:28: }
+2025-11-09T06:41:28: [lenqrk][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:41:28: [lenqrk][DEBUG] Attempting to find content document...
+2025-11-09T06:41:28: [lenqrk][INFO] Content retrieved successfully
+2025-11-09T06:42:29: [DEBUG] GET /api/content {
+2025-11-09T06:42:29:   headers: {
+2025-11-09T06:42:29:     host: 'localhost:3033',
+2025-11-09T06:42:29:     connection: 'keep-alive',
+2025-11-09T06:42:29:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:42:29:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:42:29:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:42:29:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:42:29:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:42:29:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:42:29:     origin: 'http://localhost:5144',
+2025-11-09T06:42:29:     'sec-fetch-site': 'same-site',
+2025-11-09T06:42:29:     'sec-fetch-mode': 'cors',
+2025-11-09T06:42:29:     'sec-fetch-dest': 'empty',
+2025-11-09T06:42:29:     referer: 'http://localhost:5144/',
+2025-11-09T06:42:29:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:42:29:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:42:29:     'if-none-match': 'W/"c8a-mq5oDw2LfxgFFXKOysvkvhXFDnk"'
+2025-11-09T06:42:29:   },
+2025-11-09T06:42:29:   body: undefined
+2025-11-09T06:42:29: }
+2025-11-09T06:42:29: [7wozz8][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:42:29: [7wozz8][DEBUG] Attempting to find content document...
+2025-11-09T06:42:29: [7wozz8][INFO] Content retrieved successfully
+2025-11-09T06:42:33: [DEBUG] GET /api/content {
+2025-11-09T06:42:33:   headers: {
+2025-11-09T06:42:33:     host: 'localhost:3033',
+2025-11-09T06:42:33:     connection: 'keep-alive',
+2025-11-09T06:42:33:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:42:33:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:42:33:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:42:33:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:42:33:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:42:33:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:42:33:     origin: 'http://localhost:5144',
+2025-11-09T06:42:33:     'sec-fetch-site': 'same-site',
+2025-11-09T06:42:33:     'sec-fetch-mode': 'cors',
+2025-11-09T06:42:33:     'sec-fetch-dest': 'empty',
+2025-11-09T06:42:33:     referer: 'http://localhost:5144/',
+2025-11-09T06:42:33:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:42:33:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:42:33:     'if-none-match': 'W/"c8a-BKzqeMHQhi8FNuh1gjz4eLgT0tI"'
+2025-11-09T06:42:33:   },
+2025-11-09T06:42:33:   body: undefined
+2025-11-09T06:42:33: }
+2025-11-09T06:42:33: [pc0zi][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:42:33: [pc0zi][DEBUG] Attempting to find content document...
+2025-11-09T06:42:33: [pc0zi][INFO] Content retrieved successfully
+2025-11-09T06:43:01: [DEBUG] GET /api/content {
+2025-11-09T06:43:01:   headers: {
+2025-11-09T06:43:01:     host: 'localhost:3033',
+2025-11-09T06:43:01:     connection: 'keep-alive',
+2025-11-09T06:43:01:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:43:01:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:43:01:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:43:01:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:43:01:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:43:01:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:43:01:     origin: 'http://localhost:5144',
+2025-11-09T06:43:01:     'sec-fetch-site': 'same-site',
+2025-11-09T06:43:01:     'sec-fetch-mode': 'cors',
+2025-11-09T06:43:01:     'sec-fetch-dest': 'empty',
+2025-11-09T06:43:01:     referer: 'http://localhost:5144/',
+2025-11-09T06:43:01:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:43:01:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:43:01:     'if-none-match': 'W/"c8a-DhntMt/qhtz4XRqdGrkY510wb1g"'
+2025-11-09T06:43:01:   },
+2025-11-09T06:43:01:   body: undefined
+2025-11-09T06:43:01: }
+2025-11-09T06:43:01: [wpqdg][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:43:01: [wpqdg][DEBUG] Attempting to find content document...
+2025-11-09T06:43:01: [wpqdg][INFO] Content retrieved successfully
+2025-11-09T06:43:02: [DEBUG] GET /api/content {
+2025-11-09T06:43:02:   headers: {
+2025-11-09T06:43:02:     host: 'localhost:3033',
+2025-11-09T06:43:02:     connection: 'keep-alive',
+2025-11-09T06:43:02:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:43:02:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:43:02:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:43:02:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:43:02:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:43:02:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:43:02:     origin: 'http://localhost:5144',
+2025-11-09T06:43:02:     'sec-fetch-site': 'same-site',
+2025-11-09T06:43:02:     'sec-fetch-mode': 'cors',
+2025-11-09T06:43:02:     'sec-fetch-dest': 'empty',
+2025-11-09T06:43:02:     referer: 'http://localhost:5144/',
+2025-11-09T06:43:02:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:43:02:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:43:02:     'if-none-match': 'W/"c8a-GO02oe28qCpOobqUUicuCtHZdbs"'
+2025-11-09T06:43:02:   },
+2025-11-09T06:43:02:   body: undefined
+2025-11-09T06:43:02: }
+2025-11-09T06:43:02: [86ts6h][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:43:02: [86ts6h][DEBUG] Attempting to find content document...
+2025-11-09T06:43:02: [86ts6h][INFO] Content retrieved successfully
+2025-11-09T06:45:07: [DEBUG] GET /api/content {
+2025-11-09T06:45:07:   headers: {
+2025-11-09T06:45:07:     host: 'localhost:3033',
+2025-11-09T06:45:07:     connection: 'keep-alive',
+2025-11-09T06:45:07:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:45:07:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:45:07:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:45:07:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:45:07:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:45:07:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:45:07:     origin: 'http://localhost:5144',
+2025-11-09T06:45:07:     'sec-fetch-site': 'same-site',
+2025-11-09T06:45:07:     'sec-fetch-mode': 'cors',
+2025-11-09T06:45:07:     'sec-fetch-dest': 'empty',
+2025-11-09T06:45:07:     referer: 'http://localhost:5144/',
+2025-11-09T06:45:07:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:45:07:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:45:07:     'if-none-match': 'W/"c8a-Y7YDJE9TB914CyG52z/bO7EQ48A"'
+2025-11-09T06:45:07:   },
+2025-11-09T06:45:07:   body: undefined
+2025-11-09T06:45:07: }
+2025-11-09T06:45:07: [2xlrq6][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:45:07: [2xlrq6][DEBUG] Attempting to find content document...
+2025-11-09T06:45:07: [2xlrq6][INFO] Content retrieved successfully
+2025-11-09T06:52:22: [DEBUG] GET /api/qrcodes {
+2025-11-09T06:52:22:   headers: {
+2025-11-09T06:52:22:     host: 'localhost:3033',
+2025-11-09T06:52:22:     connection: 'keep-alive',
+2025-11-09T06:52:22:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:52:22:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:52:22:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:52:22:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:52:22:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:52:22:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:52:22:     origin: 'http://localhost:5144',
+2025-11-09T06:52:22:     'sec-fetch-site': 'same-site',
+2025-11-09T06:52:22:     'sec-fetch-mode': 'cors',
+2025-11-09T06:52:22:     'sec-fetch-dest': 'empty',
+2025-11-09T06:52:22:     referer: 'http://localhost:5144/',
+2025-11-09T06:52:22:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:52:22:     'accept-language': 'en-US,en;q=0.9'
+2025-11-09T06:52:22:   },
+2025-11-09T06:52:22:   body: undefined
+2025-11-09T06:52:22: }
+2025-11-09T06:52:26: [DEBUG] GET /api/qrcodes {
+2025-11-09T06:52:26:   headers: {
+2025-11-09T06:52:26:     host: 'localhost:3033',
+2025-11-09T06:52:26:     connection: 'keep-alive',
+2025-11-09T06:52:26:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:52:26:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:52:26:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:52:26:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:52:26:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:52:26:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:52:26:     origin: 'http://localhost:5144',
+2025-11-09T06:52:26:     'sec-fetch-site': 'same-site',
+2025-11-09T06:52:26:     'sec-fetch-mode': 'cors',
+2025-11-09T06:52:26:     'sec-fetch-dest': 'empty',
+2025-11-09T06:52:26:     referer: 'http://localhost:5144/',
+2025-11-09T06:52:26:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:52:26:     'accept-language': 'en-US,en;q=0.9'
+2025-11-09T06:52:26:   },
+2025-11-09T06:52:26:   body: undefined
+2025-11-09T06:52:26: }
+2025-11-09T06:52:32: [DEBUG] GET /api/content {
+2025-11-09T06:52:32:   headers: {
+2025-11-09T06:52:32:     host: 'localhost:3033',
+2025-11-09T06:52:32:     connection: 'keep-alive',
+2025-11-09T06:52:32:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:52:32:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:52:32:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:52:32:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:52:32:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:52:32:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:52:32:     origin: 'http://localhost:5144',
+2025-11-09T06:52:32:     'sec-fetch-site': 'same-site',
+2025-11-09T06:52:32:     'sec-fetch-mode': 'cors',
+2025-11-09T06:52:32:     'sec-fetch-dest': 'empty',
+2025-11-09T06:52:32:     referer: 'http://localhost:5144/',
+2025-11-09T06:52:32:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:52:32:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:52:32:     'if-none-match': 'W/"c8a-xoEF3gETxBFZCIcK9sozReHfvns"'
+2025-11-09T06:52:32:   },
+2025-11-09T06:52:32:   body: undefined
+2025-11-09T06:52:32: }
+2025-11-09T06:52:32: [29785i][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:52:32: [29785i][DEBUG] Attempting to find content document...
+2025-11-09T06:52:32: [29785i][INFO] Content retrieved successfully
+2025-11-09T06:52:59: [DEBUG] GET /api/health {
+2025-11-09T06:52:59:   headers: { host: 'localhost:3033', 'user-agent': 'curl/8.7.1', accept: '*/*' },
+2025-11-09T06:52:59:   body: undefined
+2025-11-09T06:52:59: }
+2025-11-09T06:53:02: [DEBUG] GET /api/qrcodes {
+2025-11-09T06:53:02:   headers: { host: 'localhost:3033', 'user-agent': 'curl/8.7.1', accept: '*/*' },
+2025-11-09T06:53:02:   body: undefined
+2025-11-09T06:53:02: }
+2025-11-09T06:53:12: [INFO] Disconnected from MongoDB
+2025-11-09T06:53:13: [dotenv@17.2.2] injecting env (2) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2025-11-09T06:53:13: [dotenv@17.2.2] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2025-11-09T06:53:13: [DEBUG] Attempting MongoDB connection...
+2025-11-09T06:53:13: [DEBUG] MongoDB URL configured: Yes
+2025-11-09T06:53:13: [DEBUG] Creating MongoDB client...
+2025-11-09T06:53:13: [DEBUG] Attempting to connect...
+2025-11-09T06:53:13: [DEBUG] Running ping command...
+2025-11-09T06:53:13: [SUCCESS] Connected to MongoDB
+2025-11-09T06:53:13: [DEBUG] Successfully tested content collection access
+2025-11-09T06:53:13: API listening on port 3033
+2025-11-09T06:53:18: [DEBUG] GET /api/qrcodes {
+2025-11-09T06:53:18:   headers: { host: 'localhost:3033', 'user-agent': 'curl/8.7.1', accept: '*/*' },
+2025-11-09T06:53:18:   body: undefined
+2025-11-09T06:53:18: }
+2025-11-09T06:53:18: [s1b6jt][INFO] QR codes endpoint hit
+2025-11-09T06:53:18: [s1b6jt][DEBUG] Fetching all QR codes...
+2025-11-09T06:53:18: [s1b6jt][INFO] Retrieved 0 QR codes
+2025-11-09T06:53:23: [DEBUG] POST /api/qrcodes {
+2025-11-09T06:53:23:   headers: {
+2025-11-09T06:53:23:     host: 'localhost:3033',
+2025-11-09T06:53:23:     'user-agent': 'curl/8.7.1',
+2025-11-09T06:53:23:     accept: '*/*',
+2025-11-09T06:53:23:     'content-type': 'application/json',
+2025-11-09T06:53:23:     'content-length': '75'
+2025-11-09T06:53:23:   },
+2025-11-09T06:53:23:   body: {
+2025-11-09T06:53:23:     code: 'test-qr',
+2025-11-09T06:53:23:     link: 'https://google.com',
+2025-11-09T06:53:23:     description: 'Test QR code'
+2025-11-09T06:53:23:   }
+2025-11-09T06:53:23: }
+2025-11-09T06:53:23: [4gxz1a][INFO] Create QR code request received { code: 'test-qr' }
+2025-11-09T06:53:23: [4gxz1a][DEBUG] Creating QR code with model validation...
+2025-11-09T06:53:23: [4gxz1a][DEBUG] Saving QR code to database...
+2025-11-09T06:53:23: [4gxz1a][INFO] QR code created successfully {
+2025-11-09T06:53:23:   insertedId: new ObjectId('691080b3e74d616c6551ef46'),
+2025-11-09T06:53:23:   code: 'test-qr'
+2025-11-09T06:53:23: }
+2025-11-09T06:53:27: [DEBUG] GET /api/qrcodes/lookup/test-qr {
+2025-11-09T06:53:27:   headers: { host: 'localhost:3033', 'user-agent': 'curl/8.7.1', accept: '*/*' },
+2025-11-09T06:53:27:   body: undefined
+2025-11-09T06:53:27: }
+2025-11-09T06:53:27: [16721][INFO] QR code lookup request for: test-qr
+2025-11-09T06:53:27: [16721][INFO] QR code found, redirecting to: https://google.com
+2025-11-09T06:53:32: [DEBUG] GET /api/qrcodes {
+2025-11-09T06:53:32:   headers: { host: 'localhost:3033', 'user-agent': 'curl/8.7.1', accept: '*/*' },
+2025-11-09T06:53:32:   body: undefined
+2025-11-09T06:53:32: }
+2025-11-09T06:53:32: [ycscax][INFO] QR codes endpoint hit
+2025-11-09T06:53:32: [ycscax][DEBUG] Fetching all QR codes...
+2025-11-09T06:53:32: [ycscax][INFO] Retrieved 1 QR codes
+2025-11-09T06:53:35: [DEBUG] DELETE /api/qrcodes/691080b3e74d616c6551ef46 {
+2025-11-09T06:53:35:   headers: { host: 'localhost:3033', 'user-agent': 'curl/8.7.1', accept: '*/*' },
+2025-11-09T06:53:35:   body: undefined
+2025-11-09T06:53:35: }
+2025-11-09T06:53:36: [piecj][INFO] Delete QR code request { qrCodeId: '691080b3e74d616c6551ef46' }
+2025-11-09T06:53:36: [piecj][INFO] QR code deleted successfully { qrCodeId: '691080b3e74d616c6551ef46' }
+2025-11-09T06:56:20: [DEBUG] GET /api/content {
+2025-11-09T06:56:20:   headers: {
+2025-11-09T06:56:20:     host: 'localhost:3033',
+2025-11-09T06:56:20:     connection: 'keep-alive',
+2025-11-09T06:56:20:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T06:56:20:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T06:56:20:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T06:56:20:     accept: 'application/json, text/plain, */*',
+2025-11-09T06:56:20:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T06:56:20:     'sec-ch-ua-mobile': '?0',
+2025-11-09T06:56:20:     origin: 'http://localhost:5144',
+2025-11-09T06:56:20:     'sec-fetch-site': 'same-site',
+2025-11-09T06:56:20:     'sec-fetch-mode': 'cors',
+2025-11-09T06:56:20:     'sec-fetch-dest': 'empty',
+2025-11-09T06:56:20:     referer: 'http://localhost:5144/',
+2025-11-09T06:56:20:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T06:56:20:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T06:56:20:     'if-none-match': 'W/"c8a-4jm+bMF9h3k+iaZF541aZQ6J5JU"'
+2025-11-09T06:56:20:   },
+2025-11-09T06:56:20:   body: undefined
+2025-11-09T06:56:20: }
+2025-11-09T06:56:20: [baewc][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T06:56:20: [baewc][DEBUG] Attempting to find content document...
+2025-11-09T06:56:20: [baewc][INFO] Content retrieved successfully
+2025-11-09T07:45:43: [DEBUG] GET /api/content {
+2025-11-09T07:45:43:   headers: {
+2025-11-09T07:45:43:     host: 'localhost:3033',
+2025-11-09T07:45:43:     connection: 'keep-alive',
+2025-11-09T07:45:43:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T07:45:43:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T07:45:43:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T07:45:43:     accept: 'application/json, text/plain, */*',
+2025-11-09T07:45:43:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T07:45:43:     'sec-ch-ua-mobile': '?0',
+2025-11-09T07:45:43:     origin: 'http://localhost:5144',
+2025-11-09T07:45:43:     'sec-fetch-site': 'same-site',
+2025-11-09T07:45:43:     'sec-fetch-mode': 'cors',
+2025-11-09T07:45:43:     'sec-fetch-dest': 'empty',
+2025-11-09T07:45:43:     referer: 'http://localhost:5144/',
+2025-11-09T07:45:43:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T07:45:43:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T07:45:43:     'if-none-match': 'W/"c8a-5CLUFUY7Z8OfIngHWT9W1z6CPWU"'
+2025-11-09T07:45:43:   },
+2025-11-09T07:45:43:   body: undefined
+2025-11-09T07:45:43: }
+2025-11-09T07:45:43: [zu6jha][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T07:45:43: [zu6jha][DEBUG] Attempting to find content document...
+2025-11-09T07:45:43: [zu6jha][INFO] Content retrieved successfully
+2025-11-09T08:18:48: [DEBUG] GET /api/content {
+2025-11-09T08:18:48:   headers: {
+2025-11-09T08:18:48:     host: 'localhost:3033',
+2025-11-09T08:18:48:     connection: 'keep-alive',
+2025-11-09T08:18:48:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T08:18:48:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T08:18:48:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T08:18:48:     accept: 'application/json, text/plain, */*',
+2025-11-09T08:18:48:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T08:18:48:     'sec-ch-ua-mobile': '?0',
+2025-11-09T08:18:48:     origin: 'http://localhost:5144',
+2025-11-09T08:18:48:     'sec-fetch-site': 'same-site',
+2025-11-09T08:18:48:     'sec-fetch-mode': 'cors',
+2025-11-09T08:18:48:     'sec-fetch-dest': 'empty',
+2025-11-09T08:18:48:     referer: 'http://localhost:5144/',
+2025-11-09T08:18:48:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T08:18:48:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T08:18:48:     'if-none-match': 'W/"c8a-SbHIQOvsuyD2kDlAnbqeiCLHA+k"'
+2025-11-09T08:18:48:   },
+2025-11-09T08:18:48:   body: undefined
+2025-11-09T08:18:48: }
+2025-11-09T08:18:48: [co850h][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T08:18:48: [co850h][DEBUG] Attempting to find content document...
+2025-11-09T08:18:49: [co850h][INFO] Content retrieved successfully
+2025-11-09T08:33:04: [DEBUG] GET /api/content {
+2025-11-09T08:33:04:   headers: {
+2025-11-09T08:33:04:     host: 'localhost:3033',
+2025-11-09T08:33:04:     connection: 'keep-alive',
+2025-11-09T08:33:04:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T08:33:04:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T08:33:04:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T08:33:04:     accept: 'application/json, text/plain, */*',
+2025-11-09T08:33:04:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T08:33:04:     'sec-ch-ua-mobile': '?0',
+2025-11-09T08:33:04:     origin: 'http://localhost:5144',
+2025-11-09T08:33:04:     'sec-fetch-site': 'same-site',
+2025-11-09T08:33:04:     'sec-fetch-mode': 'cors',
+2025-11-09T08:33:04:     'sec-fetch-dest': 'empty',
+2025-11-09T08:33:04:     referer: 'http://localhost:5144/',
+2025-11-09T08:33:04:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T08:33:04:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T08:33:04:     'if-none-match': 'W/"c8a-MNQocvbfvl7iof8RkZbeiuDgP6k"'
+2025-11-09T08:33:04:   },
+2025-11-09T08:33:04:   body: undefined
+2025-11-09T08:33:04: }
+2025-11-09T08:33:04: [4c0fg][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T08:33:04: [4c0fg][DEBUG] Attempting to find content document...
+2025-11-09T08:33:04: [4c0fg][INFO] Content retrieved successfully
+2025-11-09T08:47:12: [DEBUG] GET /api/content {
+2025-11-09T08:47:12:   headers: {
+2025-11-09T08:47:12:     host: 'localhost:3033',
+2025-11-09T08:47:12:     connection: 'keep-alive',
+2025-11-09T08:47:12:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T08:47:12:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T08:47:12:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T08:47:12:     accept: 'application/json, text/plain, */*',
+2025-11-09T08:47:12:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T08:47:12:     'sec-ch-ua-mobile': '?0',
+2025-11-09T08:47:12:     origin: 'http://localhost:5144',
+2025-11-09T08:47:12:     'sec-fetch-site': 'same-site',
+2025-11-09T08:47:12:     'sec-fetch-mode': 'cors',
+2025-11-09T08:47:12:     'sec-fetch-dest': 'empty',
+2025-11-09T08:47:12:     referer: 'http://localhost:5144/',
+2025-11-09T08:47:12:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T08:47:12:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T08:47:12:     'if-none-match': 'W/"c8a-aiLBfkFRBcp3kpxBPAB+eAt1kg0"'
+2025-11-09T08:47:12:   },
+2025-11-09T08:47:12:   body: undefined
+2025-11-09T08:47:12: }
+2025-11-09T08:47:12: [sm716j][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T08:47:12: [sm716j][DEBUG] Attempting to find content document...
+2025-11-09T08:47:12: [sm716j][INFO] Content retrieved successfully
+2025-11-09T08:53:11: [DEBUG] GET /api/content {
+2025-11-09T08:53:11:   headers: {
+2025-11-09T08:53:11:     host: 'localhost:3033',
+2025-11-09T08:53:11:     connection: 'keep-alive',
+2025-11-09T08:53:11:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T08:53:11:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T08:53:11:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T08:53:11:     accept: 'application/json, text/plain, */*',
+2025-11-09T08:53:11:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T08:53:11:     'sec-ch-ua-mobile': '?0',
+2025-11-09T08:53:11:     origin: 'http://localhost:5144',
+2025-11-09T08:53:11:     'sec-fetch-site': 'same-site',
+2025-11-09T08:53:11:     'sec-fetch-mode': 'cors',
+2025-11-09T08:53:11:     'sec-fetch-dest': 'empty',
+2025-11-09T08:53:11:     referer: 'http://localhost:5144/',
+2025-11-09T08:53:11:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T08:53:11:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T08:53:11:     'if-none-match': 'W/"c8a-Dp8hyLswB/YnruaFmny/q9EXjKE"'
+2025-11-09T08:53:11:   },
+2025-11-09T08:53:11:   body: undefined
+2025-11-09T08:53:11: }
+2025-11-09T08:53:11: [s3qvk][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T08:53:11: [s3qvk][DEBUG] Attempting to find content document...
+2025-11-09T08:53:11: [s3qvk][INFO] Content retrieved successfully
+2025-11-09T09:01:07: [DEBUG] GET /api/content {
+2025-11-09T09:01:07:   headers: {
+2025-11-09T09:01:07:     host: 'localhost:3033',
+2025-11-09T09:01:07:     connection: 'keep-alive',
+2025-11-09T09:01:07:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T09:01:07:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T09:01:07:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T09:01:07:     accept: 'application/json, text/plain, */*',
+2025-11-09T09:01:07:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T09:01:07:     'sec-ch-ua-mobile': '?0',
+2025-11-09T09:01:07:     origin: 'http://localhost:5144',
+2025-11-09T09:01:07:     'sec-fetch-site': 'same-site',
+2025-11-09T09:01:07:     'sec-fetch-mode': 'cors',
+2025-11-09T09:01:07:     'sec-fetch-dest': 'empty',
+2025-11-09T09:01:07:     referer: 'http://localhost:5144/',
+2025-11-09T09:01:07:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T09:01:07:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T09:01:07:     'if-none-match': 'W/"c8a-adtJb9mh5X92hVpfleEiRWKhNmU"'
+2025-11-09T09:01:07:   },
+2025-11-09T09:01:07:   body: undefined
+2025-11-09T09:01:07: }
+2025-11-09T09:01:07: [k1zp4y][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T09:01:07: [k1zp4y][DEBUG] Attempting to find content document...
+2025-11-09T09:01:07: [k1zp4y][INFO] Content retrieved successfully
+2025-11-09T09:09:04: [DEBUG] GET /api/content {
+2025-11-09T09:09:04:   headers: {
+2025-11-09T09:09:04:     host: 'localhost:3033',
+2025-11-09T09:09:04:     connection: 'keep-alive',
+2025-11-09T09:09:04:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T09:09:04:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T09:09:04:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T09:09:04:     accept: 'application/json, text/plain, */*',
+2025-11-09T09:09:04:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T09:09:04:     'sec-ch-ua-mobile': '?0',
+2025-11-09T09:09:04:     origin: 'http://localhost:5144',
+2025-11-09T09:09:04:     'sec-fetch-site': 'same-site',
+2025-11-09T09:09:04:     'sec-fetch-mode': 'cors',
+2025-11-09T09:09:04:     'sec-fetch-dest': 'empty',
+2025-11-09T09:09:04:     referer: 'http://localhost:5144/',
+2025-11-09T09:09:04:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T09:09:04:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T09:09:04:     'if-none-match': 'W/"c8a-KM+zQ6Gz1kF2jxSRPzsq0KlWrhU"'
+2025-11-09T09:09:04:   },
+2025-11-09T09:09:04:   body: undefined
+2025-11-09T09:09:04: }
+2025-11-09T09:09:04: [ior3xs][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T09:09:04: [ior3xs][DEBUG] Attempting to find content document...
+2025-11-09T09:09:04: [ior3xs][INFO] Content retrieved successfully
+2025-11-09T09:15:00: [DEBUG] GET /api/content {
+2025-11-09T09:15:00:   headers: {
+2025-11-09T09:15:00:     host: 'localhost:3033',
+2025-11-09T09:15:00:     connection: 'keep-alive',
+2025-11-09T09:15:00:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T09:15:00:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T09:15:00:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T09:15:00:     accept: 'application/json, text/plain, */*',
+2025-11-09T09:15:00:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T09:15:00:     'sec-ch-ua-mobile': '?0',
+2025-11-09T09:15:00:     origin: 'http://localhost:5144',
+2025-11-09T09:15:00:     'sec-fetch-site': 'same-site',
+2025-11-09T09:15:00:     'sec-fetch-mode': 'cors',
+2025-11-09T09:15:00:     'sec-fetch-dest': 'empty',
+2025-11-09T09:15:00:     referer: 'http://localhost:5144/',
+2025-11-09T09:15:00:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T09:15:00:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T09:15:00:     'if-none-match': 'W/"c8a-T6Qu3b80pS0KDz7VWyt8Coiv1/o"'
+2025-11-09T09:15:00:   },
+2025-11-09T09:15:00:   body: undefined
+2025-11-09T09:15:00: }
+2025-11-09T09:15:00: [ms0bn][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T09:15:00: [ms0bn][DEBUG] Attempting to find content document...
+2025-11-09T09:15:00: [ms0bn][INFO] Content retrieved successfully
+2025-11-09T09:20:48: [DEBUG] GET /api/content {
+2025-11-09T09:20:48:   headers: {
+2025-11-09T09:20:48:     host: 'localhost:3033',
+2025-11-09T09:20:48:     connection: 'keep-alive',
+2025-11-09T09:20:48:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T09:20:48:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T09:20:48:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T09:20:48:     accept: 'application/json, text/plain, */*',
+2025-11-09T09:20:48:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T09:20:48:     'sec-ch-ua-mobile': '?0',
+2025-11-09T09:20:48:     origin: 'http://localhost:5144',
+2025-11-09T09:20:48:     'sec-fetch-site': 'same-site',
+2025-11-09T09:20:48:     'sec-fetch-mode': 'cors',
+2025-11-09T09:20:48:     'sec-fetch-dest': 'empty',
+2025-11-09T09:20:48:     referer: 'http://localhost:5144/',
+2025-11-09T09:20:48:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T09:20:48:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T09:20:48:     'if-none-match': 'W/"c8a-Syqh7PB3QC8rBXNUYEauivn4i/g"'
+2025-11-09T09:20:48:   },
+2025-11-09T09:20:48:   body: undefined
+2025-11-09T09:20:48: }
+2025-11-09T09:20:48: [3ac6ss][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T09:20:48: [3ac6ss][DEBUG] Attempting to find content document...
+2025-11-09T09:20:48: [3ac6ss][INFO] Content retrieved successfully
+2025-11-09T09:32:55: [DEBUG] GET /api/content {
+2025-11-09T09:32:55:   headers: {
+2025-11-09T09:32:55:     host: 'localhost:3033',
+2025-11-09T09:32:55:     connection: 'keep-alive',
+2025-11-09T09:32:55:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T09:32:55:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T09:32:55:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T09:32:55:     accept: 'application/json, text/plain, */*',
+2025-11-09T09:32:55:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T09:32:55:     'sec-ch-ua-mobile': '?0',
+2025-11-09T09:32:55:     origin: 'http://localhost:5144',
+2025-11-09T09:32:55:     'sec-fetch-site': 'same-site',
+2025-11-09T09:32:55:     'sec-fetch-mode': 'cors',
+2025-11-09T09:32:55:     'sec-fetch-dest': 'empty',
+2025-11-09T09:32:55:     referer: 'http://localhost:5144/',
+2025-11-09T09:32:55:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T09:32:55:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T09:32:55:     'if-none-match': 'W/"c8a-vrXYR059qliLfJhP9XGOejBBEDo"'
+2025-11-09T09:32:55:   },
+2025-11-09T09:32:55:   body: undefined
+2025-11-09T09:32:55: }
+2025-11-09T09:32:55: [cpvh3s][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T09:32:55: [cpvh3s][DEBUG] Attempting to find content document...
+2025-11-09T09:32:55: [cpvh3s][INFO] Content retrieved successfully
+2025-11-09T09:50:06: [DEBUG] GET /api/content {
+2025-11-09T09:50:06:   headers: {
+2025-11-09T09:50:06:     host: 'localhost:3033',
+2025-11-09T09:50:06:     connection: 'keep-alive',
+2025-11-09T09:50:06:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T09:50:06:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T09:50:06:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T09:50:06:     accept: 'application/json, text/plain, */*',
+2025-11-09T09:50:06:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T09:50:06:     'sec-ch-ua-mobile': '?0',
+2025-11-09T09:50:06:     origin: 'http://localhost:5144',
+2025-11-09T09:50:06:     'sec-fetch-site': 'same-site',
+2025-11-09T09:50:06:     'sec-fetch-mode': 'cors',
+2025-11-09T09:50:06:     'sec-fetch-dest': 'empty',
+2025-11-09T09:50:06:     referer: 'http://localhost:5144/',
+2025-11-09T09:50:06:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T09:50:06:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T09:50:06:     'if-none-match': 'W/"c8a-dw+nJn3TXo4NZ5FNKcYPKm6RfMc"'
+2025-11-09T09:50:06:   },
+2025-11-09T09:50:06:   body: undefined
+2025-11-09T09:50:06: }
+2025-11-09T09:50:06: [a264j4][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T09:50:07: [a264j4][DEBUG] Attempting to find content document...
+2025-11-09T09:50:07: [a264j4][INFO] Content retrieved successfully
+2025-11-09T12:46:34: [DEBUG] GET /api/content {
+2025-11-09T12:46:34:   headers: {
+2025-11-09T12:46:34:     host: 'localhost:3033',
+2025-11-09T12:46:34:     connection: 'keep-alive',
+2025-11-09T12:46:34:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T12:46:34:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T12:46:34:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T12:46:34:     accept: 'application/json, text/plain, */*',
+2025-11-09T12:46:34:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T12:46:34:     'sec-ch-ua-mobile': '?0',
+2025-11-09T12:46:34:     origin: 'http://localhost:5144',
+2025-11-09T12:46:34:     'sec-fetch-site': 'same-site',
+2025-11-09T12:46:34:     'sec-fetch-mode': 'cors',
+2025-11-09T12:46:34:     'sec-fetch-dest': 'empty',
+2025-11-09T12:46:34:     referer: 'http://localhost:5144/',
+2025-11-09T12:46:34:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T12:46:34:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T12:46:34:     'if-none-match': 'W/"c8a-0+MMZG9akPPecyDg+U7RMwRrxsg"'
+2025-11-09T12:46:34:   },
+2025-11-09T12:46:34:   body: undefined
+2025-11-09T12:46:34: }
+2025-11-09T12:46:34: [m679x][INFO] Content endpoint hit { method: 'GET', path: '/content', query: [Object: null prototype] {} }
+2025-11-09T12:46:35: [m679x][DEBUG] Attempting to find content document...
+2025-11-09T12:46:36: [m679x][INFO] Content retrieved successfully
+2025-11-09T13:23:45: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:23:45:   headers: {
+2025-11-09T13:23:45:     host: 'localhost:3033',
+2025-11-09T13:23:45:     connection: 'keep-alive',
+2025-11-09T13:23:45:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:23:45:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:23:45:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:23:45:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:23:45:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:23:45:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:23:45:     origin: 'http://localhost:5144',
+2025-11-09T13:23:45:     'sec-fetch-site': 'same-site',
+2025-11-09T13:23:45:     'sec-fetch-mode': 'cors',
+2025-11-09T13:23:45:     'sec-fetch-dest': 'empty',
+2025-11-09T13:23:45:     referer: 'http://localhost:5144/',
+2025-11-09T13:23:45:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:23:45:     'accept-language': 'en-US,en;q=0.9'
+2025-11-09T13:23:45:   },
+2025-11-09T13:23:45:   body: undefined
+2025-11-09T13:23:45: }
+2025-11-09T13:23:45: [g20l2r][INFO] QR codes endpoint hit
+2025-11-09T13:23:45: [g20l2r][DEBUG] Fetching all QR codes...
+2025-11-09T13:23:45: [g20l2r][INFO] Retrieved 0 QR codes
+2025-11-09T13:37:51: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:37:51:   headers: {
+2025-11-09T13:37:51:     host: 'localhost:3033',
+2025-11-09T13:37:51:     connection: 'keep-alive',
+2025-11-09T13:37:51:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:37:51:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:37:51:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:37:51:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:37:51:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:37:51:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:37:51:     origin: 'http://localhost:5144',
+2025-11-09T13:37:51:     'sec-fetch-site': 'same-site',
+2025-11-09T13:37:51:     'sec-fetch-mode': 'cors',
+2025-11-09T13:37:51:     'sec-fetch-dest': 'empty',
+2025-11-09T13:37:51:     referer: 'http://localhost:5144/',
+2025-11-09T13:37:51:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:37:51:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:37:51:     'if-none-match': 'W/"7d-s3Tn1O4rUdLOMyo8SADSKzo/qkY"'
+2025-11-09T13:37:51:   },
+2025-11-09T13:37:51:   body: undefined
+2025-11-09T13:37:51: }
+2025-11-09T13:37:51: [sa596e][INFO] QR codes endpoint hit
+2025-11-09T13:37:51: [sa596e][DEBUG] Fetching all QR codes...
+2025-11-09T13:37:51: [sa596e][INFO] Retrieved 0 QR codes
+2025-11-09T13:40:10: [DEBUG] POST /api/qrcodes {
+2025-11-09T13:40:10:   headers: {
+2025-11-09T13:40:10:     host: 'localhost:3033',
+2025-11-09T13:40:10:     connection: 'keep-alive',
+2025-11-09T13:40:10:     'content-length': '69',
+2025-11-09T13:40:10:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:40:10:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:40:10:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:40:10:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:40:10:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:40:10:     'content-type': 'application/json',
+2025-11-09T13:40:10:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:40:10:     origin: 'http://localhost:5144',
+2025-11-09T13:40:10:     'sec-fetch-site': 'same-site',
+2025-11-09T13:40:10:     'sec-fetch-mode': 'cors',
+2025-11-09T13:40:10:     'sec-fetch-dest': 'empty',
+2025-11-09T13:40:10:     referer: 'http://localhost:5144/',
+2025-11-09T13:40:10:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:40:10:     'accept-language': 'en-US,en;q=0.9'
+2025-11-09T13:40:10:   },
+2025-11-09T13:40:10:   body: {
+2025-11-09T13:40:10:     code: 'nothing',
+2025-11-09T13:40:10:     link: 'https://bracketforce.com',
+2025-11-09T13:40:10:     description: ''
+2025-11-09T13:40:10:   }
+2025-11-09T13:40:10: }
+2025-11-09T13:40:10: [xstfx][INFO] Create QR code request received { code: 'nothing' }
+2025-11-09T13:40:10: [xstfx][DEBUG] Creating QR code with model validation...
+2025-11-09T13:40:10: [xstfx][DEBUG] Saving QR code to database...
+2025-11-09T13:40:10: [xstfx][INFO] QR code created successfully {
+2025-11-09T13:40:10:   insertedId: new ObjectId('6910e00ae74d616c6551ef47'),
+2025-11-09T13:40:10:   code: 'nothing'
+2025-11-09T13:40:10: }
+2025-11-09T13:40:10: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:40:10:   headers: {
+2025-11-09T13:40:10:     host: 'localhost:3033',
+2025-11-09T13:40:10:     connection: 'keep-alive',
+2025-11-09T13:40:10:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:40:10:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:40:10:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:40:10:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:40:10:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:40:10:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:40:10:     origin: 'http://localhost:5144',
+2025-11-09T13:40:10:     'sec-fetch-site': 'same-site',
+2025-11-09T13:40:10:     'sec-fetch-mode': 'cors',
+2025-11-09T13:40:10:     'sec-fetch-dest': 'empty',
+2025-11-09T13:40:10:     referer: 'http://localhost:5144/',
+2025-11-09T13:40:10:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:40:10:     'accept-language': 'en-US,en;q=0.9'
+2025-11-09T13:40:10:   },
+2025-11-09T13:40:10:   body: undefined
+2025-11-09T13:40:10: }
+2025-11-09T13:40:10: [2q6d4o][INFO] QR codes endpoint hit
+2025-11-09T13:40:10: [2q6d4o][DEBUG] Fetching all QR codes...
+2025-11-09T13:40:10: [2q6d4o][INFO] Retrieved 1 QR codes
+2025-11-09T13:41:59: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:41:59:   headers: {
+2025-11-09T13:41:59:     host: 'localhost:3033',
+2025-11-09T13:41:59:     connection: 'keep-alive',
+2025-11-09T13:41:59:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:41:59:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:41:59:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:41:59:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:41:59:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:41:59:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:41:59:     origin: 'http://localhost:5144',
+2025-11-09T13:41:59:     'sec-fetch-site': 'same-site',
+2025-11-09T13:41:59:     'sec-fetch-mode': 'cors',
+2025-11-09T13:41:59:     'sec-fetch-dest': 'empty',
+2025-11-09T13:41:59:     referer: 'http://localhost:5144/',
+2025-11-09T13:41:59:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:41:59:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:41:59:     'if-none-match': 'W/"186-b2nAb3vnp86H8Ze/gI642fLEi/4"'
+2025-11-09T13:41:59:   },
+2025-11-09T13:41:59:   body: undefined
+2025-11-09T13:41:59: }
+2025-11-09T13:41:59: [xx1a1f][INFO] QR codes endpoint hit
+2025-11-09T13:41:59: [xx1a1f][DEBUG] Fetching all QR codes...
+2025-11-09T13:41:59: [xx1a1f][INFO] Retrieved 1 QR codes
+2025-11-09T13:42:00: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:42:00:   headers: {
+2025-11-09T13:42:00:     host: 'localhost:3033',
+2025-11-09T13:42:00:     connection: 'keep-alive',
+2025-11-09T13:42:00:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:42:00:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:42:00:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:42:00:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:42:00:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:42:00:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:42:00:     origin: 'http://localhost:5144',
+2025-11-09T13:42:00:     'sec-fetch-site': 'same-site',
+2025-11-09T13:42:00:     'sec-fetch-mode': 'cors',
+2025-11-09T13:42:00:     'sec-fetch-dest': 'empty',
+2025-11-09T13:42:00:     referer: 'http://localhost:5144/',
+2025-11-09T13:42:00:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:42:00:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:42:00:     'if-none-match': 'W/"186-LahxMnfnGzQZ5Ls3tczMLKfXIJI"'
+2025-11-09T13:42:00:   },
+2025-11-09T13:42:00:   body: undefined
+2025-11-09T13:42:00: }
+2025-11-09T13:42:00: [kqunu][INFO] QR codes endpoint hit
+2025-11-09T13:42:00: [kqunu][DEBUG] Fetching all QR codes...
+2025-11-09T13:42:00: [kqunu][INFO] Retrieved 1 QR codes
+2025-11-09T13:42:12: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:42:12:   headers: {
+2025-11-09T13:42:12:     host: 'localhost:3033',
+2025-11-09T13:42:12:     connection: 'keep-alive',
+2025-11-09T13:42:12:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:42:12:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:42:12:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:42:12:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:42:12:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:42:12:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:42:12:     origin: 'http://localhost:5144',
+2025-11-09T13:42:12:     'sec-fetch-site': 'same-site',
+2025-11-09T13:42:12:     'sec-fetch-mode': 'cors',
+2025-11-09T13:42:12:     'sec-fetch-dest': 'empty',
+2025-11-09T13:42:12:     referer: 'http://localhost:5144/',
+2025-11-09T13:42:12:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:42:12:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:42:12:     'if-none-match': 'W/"186-NzGzP/7QIA1y9mZbEcimLMl5NiE"'
+2025-11-09T13:42:12:   },
+2025-11-09T13:42:12:   body: undefined
+2025-11-09T13:42:12: }
+2025-11-09T13:42:12: [c4jji][INFO] QR codes endpoint hit
+2025-11-09T13:42:12: [c4jji][DEBUG] Fetching all QR codes...
+2025-11-09T13:42:12: [c4jji][INFO] Retrieved 1 QR codes
+2025-11-09T13:42:33: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:42:33:   headers: {
+2025-11-09T13:42:33:     host: 'localhost:3033',
+2025-11-09T13:42:33:     connection: 'keep-alive',
+2025-11-09T13:42:33:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:42:33:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:42:33:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:42:33:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:42:33:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:42:33:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:42:33:     origin: 'http://localhost:5144',
+2025-11-09T13:42:33:     'sec-fetch-site': 'same-site',
+2025-11-09T13:42:33:     'sec-fetch-mode': 'cors',
+2025-11-09T13:42:33:     'sec-fetch-dest': 'empty',
+2025-11-09T13:42:33:     referer: 'http://localhost:5144/',
+2025-11-09T13:42:33:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:42:33:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:42:33:     'if-none-match': 'W/"186-gO6KhmYvubL37VIGbJENoHJXNsw"'
+2025-11-09T13:42:33:   },
+2025-11-09T13:42:33:   body: undefined
+2025-11-09T13:42:33: }
+2025-11-09T13:42:33: [gvep8f][INFO] QR codes endpoint hit
+2025-11-09T13:42:33: [gvep8f][DEBUG] Fetching all QR codes...
+2025-11-09T13:42:33: [gvep8f][INFO] Retrieved 1 QR codes
+2025-11-09T13:46:50: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:46:50:   headers: {
+2025-11-09T13:46:50:     host: 'localhost:3033',
+2025-11-09T13:46:50:     connection: 'keep-alive',
+2025-11-09T13:46:50:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:46:50:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:46:50:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:46:50:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:46:50:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:46:50:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:46:50:     origin: 'http://localhost:5144',
+2025-11-09T13:46:50:     'sec-fetch-site': 'same-site',
+2025-11-09T13:46:50:     'sec-fetch-mode': 'cors',
+2025-11-09T13:46:50:     'sec-fetch-dest': 'empty',
+2025-11-09T13:46:50:     referer: 'http://localhost:5144/',
+2025-11-09T13:46:50:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:46:50:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:46:50:     'if-none-match': 'W/"186-dDu2QsPIC6pjL6HDyoFUtz+rOWA"'
+2025-11-09T13:46:50:   },
+2025-11-09T13:46:50:   body: undefined
+2025-11-09T13:46:50: }
+2025-11-09T13:46:50: [0lghqt][INFO] QR codes endpoint hit
+2025-11-09T13:46:50: [0lghqt][DEBUG] Fetching all QR codes...
+2025-11-09T13:46:50: [0lghqt][INFO] Retrieved 1 QR codes
+2025-11-09T13:57:36: [DEBUG] GET /api/qrcodes {
+2025-11-09T13:57:36:   headers: {
+2025-11-09T13:57:36:     host: 'localhost:3033',
+2025-11-09T13:57:36:     connection: 'keep-alive',
+2025-11-09T13:57:36:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T13:57:36:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T13:57:36:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T13:57:36:     accept: 'application/json, text/plain, */*',
+2025-11-09T13:57:36:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T13:57:36:     'sec-ch-ua-mobile': '?0',
+2025-11-09T13:57:36:     origin: 'http://localhost:5144',
+2025-11-09T13:57:36:     'sec-fetch-site': 'same-site',
+2025-11-09T13:57:36:     'sec-fetch-mode': 'cors',
+2025-11-09T13:57:36:     'sec-fetch-dest': 'empty',
+2025-11-09T13:57:36:     referer: 'http://localhost:5144/',
+2025-11-09T13:57:36:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T13:57:36:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T13:57:36:     'if-none-match': 'W/"186-dmpuPIqU3LdKC4ghrZ0Yvl+8QD8"'
+2025-11-09T13:57:36:   },
+2025-11-09T13:57:36:   body: undefined
+2025-11-09T13:57:36: }
+2025-11-09T13:57:36: [1cfb2j][INFO] QR codes endpoint hit
+2025-11-09T13:57:36: [1cfb2j][DEBUG] Fetching all QR codes...
+2025-11-09T13:57:36: [1cfb2j][INFO] Retrieved 1 QR codes
+2025-11-09T14:02:57: [DEBUG] GET /api/qrcodes {
+2025-11-09T14:02:57:   headers: {
+2025-11-09T14:02:57:     host: 'localhost:3033',
+2025-11-09T14:02:57:     connection: 'keep-alive',
+2025-11-09T14:02:57:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T14:02:57:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T14:02:57:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T14:02:57:     accept: 'application/json, text/plain, */*',
+2025-11-09T14:02:57:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T14:02:57:     'sec-ch-ua-mobile': '?0',
+2025-11-09T14:02:57:     origin: 'http://localhost:5144',
+2025-11-09T14:02:57:     'sec-fetch-site': 'same-site',
+2025-11-09T14:02:57:     'sec-fetch-mode': 'cors',
+2025-11-09T14:02:57:     'sec-fetch-dest': 'empty',
+2025-11-09T14:02:57:     referer: 'http://localhost:5144/',
+2025-11-09T14:02:57:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T14:02:57:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T14:02:57:     'if-none-match': 'W/"186-VkevUfq3Pv2zYga9ttsVERI0rR0"'
+2025-11-09T14:02:57:   },
+2025-11-09T14:02:57:   body: undefined
+2025-11-09T14:02:57: }
+2025-11-09T14:02:57: [1xkkvd][INFO] QR codes endpoint hit
+2025-11-09T14:02:57: [1xkkvd][DEBUG] Fetching all QR codes...
+2025-11-09T14:02:57: [1xkkvd][INFO] Retrieved 1 QR codes
+2025-11-09T14:23:33: [DEBUG] GET /api/qrcodes {
+2025-11-09T14:23:33:   headers: {
+2025-11-09T14:23:33:     host: 'localhost:3033',
+2025-11-09T14:23:33:     connection: 'keep-alive',
+2025-11-09T14:23:33:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T14:23:33:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T14:23:33:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T14:23:33:     accept: 'application/json, text/plain, */*',
+2025-11-09T14:23:33:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T14:23:33:     'sec-ch-ua-mobile': '?0',
+2025-11-09T14:23:33:     origin: 'http://localhost:5144',
+2025-11-09T14:23:33:     'sec-fetch-site': 'same-site',
+2025-11-09T14:23:33:     'sec-fetch-mode': 'cors',
+2025-11-09T14:23:33:     'sec-fetch-dest': 'empty',
+2025-11-09T14:23:33:     referer: 'http://localhost:5144/',
+2025-11-09T14:23:33:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T14:23:33:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T14:23:33:     'if-none-match': 'W/"186-dIPZjoobE2giviIjk0U0PSXJQww"'
+2025-11-09T14:23:33:   },
+2025-11-09T14:23:33:   body: undefined
+2025-11-09T14:23:33: }
+2025-11-09T14:23:33: [o7a5a1][INFO] QR codes endpoint hit
+2025-11-09T14:23:35: [o7a5a1][DEBUG] Fetching all QR codes...
+2025-11-09T14:23:35: [o7a5a1][INFO] Retrieved 1 QR codes
+2025-11-09T14:27:53: [DEBUG] GET /api/qrcodes {
+2025-11-09T14:27:53:   headers: {
+2025-11-09T14:27:53:     host: 'localhost:3033',
+2025-11-09T14:27:53:     connection: 'keep-alive',
+2025-11-09T14:27:53:     'sec-ch-ua-platform': '"macOS"',
+2025-11-09T14:27:53:     authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjI2ODgyMTEsImV4cCI6MTc2Mjc3NDYxMX0.880NS4ZOVzVxYqrfqLcDU3bZc_dmV2lPqOf2wV8qCJI',
+2025-11-09T14:27:53:     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+2025-11-09T14:27:53:     accept: 'application/json, text/plain, */*',
+2025-11-09T14:27:53:     'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+2025-11-09T14:27:53:     'sec-ch-ua-mobile': '?0',
+2025-11-09T14:27:53:     origin: 'http://localhost:5144',
+2025-11-09T14:27:53:     'sec-fetch-site': 'same-site',
+2025-11-09T14:27:53:     'sec-fetch-mode': 'cors',
+2025-11-09T14:27:53:     'sec-fetch-dest': 'empty',
+2025-11-09T14:27:53:     referer: 'http://localhost:5144/',
+2025-11-09T14:27:53:     'accept-encoding': 'gzip, deflate, br, zstd',
+2025-11-09T14:27:53:     'accept-language': 'en-US,en;q=0.9',
+2025-11-09T14:27:53:     'if-none-match': 'W/"186-IyM1U4TaxA/SUV0BE2Eq5vbsLjU"'
+2025-11-09T14:27:53:   },
+2025-11-09T14:27:53:   body: undefined
+2025-11-09T14:27:53: }
+2025-11-09T14:27:53: [k247ju][INFO] QR codes endpoint hit
+2025-11-09T14:27:53: [k247ju][DEBUG] Fetching all QR codes...
+2025-11-09T14:27:53: [k247ju][INFO] Retrieved 1 QR codes

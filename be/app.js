@@ -7,6 +7,7 @@ import cors from "cors";
 import jwt from "jsonwebtoken";
 import database from "./config/database.js";
 import Message from "./models/Message.js";
+import QRCode from "./models/QRCode.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, ".env") });
@@ -543,6 +544,342 @@ apiRouter.patch('/messages/:id/status', authenticateToken, async (req, res) => {
     });
 
     sendErrorResponse(res, 500, "Failed to update message status", {
+      type: "unknown_error"
+    });
+  }
+});
+
+// ============================================
+// QR CODE ENDPOINTS
+// ============================================
+
+// Get all QR codes (protected - admin only)
+apiRouter.get('/qrcodes', authenticateToken, async (req, res) => {
+  const requestId = Math.random().toString(36).substring(7);
+  console.log(`[${requestId}][INFO] QR codes endpoint hit`);
+
+  try {
+    // Check if database is available
+    if (!database.getClient()) {
+      console.error(`[${requestId}][ERROR] Database connection not available`);
+      return sendErrorResponse(res, 503, "Database service unavailable");
+    }
+
+    const db = database.getDb();
+
+    // Validate database connection
+    try {
+      await db.command({ ping: 1 });
+    } catch (pingError) {
+      console.error(`[${requestId}][ERROR] Database ping failed:`, pingError);
+      return sendErrorResponse(res, 503, "Database service not responding");
+    }
+
+    console.log(`[${requestId}][DEBUG] Fetching all QR codes...`);
+
+    // Fetch all QR codes, sorted by creation date (newest first)
+    const qrCodes = await db.collection(QRCode.collectionName)
+      .find({})
+      .sort({ createdAt: -1 })
+      .toArray();
+
+    console.log(`[${requestId}][INFO] Retrieved ${qrCodes.length} QR codes`);
+
+    // Format QR codes for frontend consumption
+    const formattedQRCodes = qrCodes.map(qr => ({
+      id: qr._id,
+      code: qr.code,
+      link: qr.link,
+      description: qr.description || '',
+      createdAt: qr.createdAt,
+      updatedAt: qr.updatedAt,
+      createdBy: qr.createdBy,
+      clickCount: qr.clickCount || 0,
+      lastClickedAt: qr.lastClickedAt,
+      // Generate the full QR URL
+      qrUrl: `https://evolvecommunities.com/qr/${qr.code}`
+    }));
+
+    sendSuccessResponse(res, {
+      qrCodes: formattedQRCodes,
+      totalCount: qrCodes.length
+    }, `Retrieved ${qrCodes.length} QR codes`);
+
+  } catch (error) {
+    console.error(`[${requestId}][ERROR] Failed to fetch QR codes:`, {
+      error: error.message,
+      stack: error.stack
+    });
+
+    if (error.name === 'MongoServerError') {
+      return sendErrorResponse(res, 500, "Database error occurred", {
+        code: error.code,
+        type: "database_error"
+      });
+    }
+
+    sendErrorResponse(res, 500, "Failed to fetch QR codes", {
+      type: "unknown_error"
+    });
+  }
+});
+
+// Get single QR code by code (public - for redirect)
+apiRouter.get('/qrcodes/lookup/:code', async (req, res) => {
+  const requestId = Math.random().toString(36).substring(7);
+  const code = req.params.code;
+
+  console.log(`[${requestId}][INFO] QR code lookup request for: ${code}`);
+
+  try {
+    // Check if database is available
+    if (!database.getClient()) {
+      console.error(`[${requestId}][ERROR] Database connection not available`);
+      return sendErrorResponse(res, 503, "Database service unavailable");
+    }
+
+    const db = database.getDb();
+
+    // Find QR code by code
+    const qrCode = await db.collection(QRCode.collectionName).findOne({ code });
+
+    if (!qrCode) {
+      console.log(`[${requestId}][INFO] QR code not found: ${code}`);
+      return sendErrorResponse(res, 404, "QR code not found");
+    }
+
+    // Increment click count (fire and forget - don't wait for it)
+    db.collection(QRCode.collectionName).updateOne(
+      { code },
+      QRCode.incrementClick()
+    ).catch(err => {
+      console.error(`[${requestId}][ERROR] Failed to increment click count:`, err);
+    });
+
+    console.log(`[${requestId}][INFO] QR code found, redirecting to: ${qrCode.link}`);
+
+    sendSuccessResponse(res, {
+      code: qrCode.code,
+      link: qrCode.link,
+      description: qrCode.description
+    }, "QR code found");
+
+  } catch (error) {
+    console.error(`[${requestId}][ERROR] Failed to lookup QR code:`, {
+      error: error.message,
+      stack: error.stack
+    });
+
+    sendErrorResponse(res, 500, "Failed to lookup QR code", {
+      type: "unknown_error"
+    });
+  }
+});
+
+// Create new QR code (protected - admin only)
+apiRouter.post('/qrcodes', authenticateToken, async (req, res) => {
+  const requestId = Math.random().toString(36).substring(7);
+  console.log(`[${requestId}][INFO] Create QR code request received`, {
+    code: req.body.code
+  });
+
+  try {
+    if (!req.body || !req.body.code || !req.body.link) {
+      return sendErrorResponse(res, 400, "Code and link are required");
+    }
+
+    // Check if database is available
+    if (!database.getClient()) {
+      console.error(`[${requestId}][ERROR] Database connection not available`);
+      return sendErrorResponse(res, 503, "Database service unavailable");
+    }
+
+    const db = database.getDb();
+
+    // Check if code already exists
+    const existingQR = await db.collection(QRCode.collectionName).findOne({ 
+      code: req.body.code 
+    });
+
+    if (existingQR) {
+      return sendErrorResponse(res, 409, "A QR code with this code already exists");
+    }
+
+    console.log(`[${requestId}][DEBUG] Creating QR code with model validation...`);
+    
+    // Use QRCode model to validate and create the document
+    let qrCodeDocument;
+    try {
+      qrCodeDocument = QRCode.create(req.body, 'admin');
+    } catch (validationError) {
+      console.log(`[${requestId}][WARN] QR code validation failed:`, validationError.message);
+      return sendErrorResponse(res, 400, validationError.message);
+    }
+
+    console.log(`[${requestId}][DEBUG] Saving QR code to database...`);
+    
+    // Save to database
+    const result = await db.collection(QRCode.collectionName).insertOne(qrCodeDocument);
+    
+    console.log(`[${requestId}][INFO] QR code created successfully`, {
+      insertedId: result.insertedId,
+      code: qrCodeDocument.code
+    });
+
+    // Return success response
+    sendSuccessResponse(res, {
+      id: result.insertedId,
+      code: qrCodeDocument.code,
+      link: qrCodeDocument.link,
+      description: qrCodeDocument.description,
+      qrUrl: `https://evolvecommunities.com/qr/${qrCodeDocument.code}`,
+      createdAt: qrCodeDocument.createdAt
+    }, "QR code created successfully");
+
+  } catch (error) {
+    console.error(`[${requestId}][ERROR] Failed to create QR code:`, {
+      error: error.message,
+      stack: error.stack
+    });
+
+    if (error.name === 'MongoServerError') {
+      return sendErrorResponse(res, 500, "Database error occurred", {
+        code: error.code,
+        type: "database_error"
+      });
+    }
+
+    sendErrorResponse(res, 500, "Failed to create QR code", {
+      type: "unknown_error"
+    });
+  }
+});
+
+// Update QR code (protected - admin only)
+// Note: code cannot be updated, only link and description
+apiRouter.put('/qrcodes/:id', authenticateToken, async (req, res) => {
+  const requestId = Math.random().toString(36).substring(7);
+  const qrCodeId = req.params.id;
+  
+  console.log(`[${requestId}][INFO] Update QR code request`, {
+    qrCodeId,
+    updates: Object.keys(req.body)
+  });
+
+  try {
+    if (!req.body || Object.keys(req.body).length === 0) {
+      return sendErrorResponse(res, 400, "Update data is required");
+    }
+
+    // Prevent code modification
+    if (req.body.code !== undefined) {
+      return sendErrorResponse(res, 400, "Code cannot be modified after creation");
+    }
+
+    // Check if database is available
+    if (!database.getClient()) {
+      console.error(`[${requestId}][ERROR] Database connection not available`);
+      return sendErrorResponse(res, 503, "Database service unavailable");
+    }
+
+    const db = database.getDb();
+
+    // Prepare update data using model validation
+    let updateData;
+    try {
+      updateData = QRCode.prepareUpdate(req.body);
+    } catch (validationError) {
+      console.log(`[${requestId}][WARN] QR code update validation failed:`, validationError.message);
+      return sendErrorResponse(res, 400, validationError.message);
+    }
+
+    // Update the QR code (convert id to ObjectId for MongoDB)
+    let objectId;
+    try {
+      objectId = new ObjectId(qrCodeId);
+    } catch (err) {
+      return sendErrorResponse(res, 400, "Invalid QR code ID format");
+    }
+    
+    const result = await db.collection(QRCode.collectionName).updateOne(
+      { _id: objectId },
+      { $set: updateData }
+    );
+
+    if (result.matchedCount === 0) {
+      return sendErrorResponse(res, 404, "QR code not found");
+    }
+
+    console.log(`[${requestId}][INFO] QR code updated successfully`, {
+      qrCodeId,
+      modified: result.modifiedCount
+    });
+
+    sendSuccessResponse(res, {
+      id: qrCodeId,
+      modified: result.modifiedCount
+    }, "QR code updated successfully");
+
+  } catch (error) {
+    console.error(`[${requestId}][ERROR] Failed to update QR code:`, {
+      error: error.message,
+      stack: error.stack
+    });
+
+    sendErrorResponse(res, 500, "Failed to update QR code", {
+      type: "unknown_error"
+    });
+  }
+});
+
+// Delete QR code (protected - admin only)
+apiRouter.delete('/qrcodes/:id', authenticateToken, async (req, res) => {
+  const requestId = Math.random().toString(36).substring(7);
+  const qrCodeId = req.params.id;
+
+  console.log(`[${requestId}][INFO] Delete QR code request`, { qrCodeId });
+
+  try {
+    // Check if database is available
+    if (!database.getClient()) {
+      console.error(`[${requestId}][ERROR] Database connection not available`);
+      return sendErrorResponse(res, 503, "Database service unavailable");
+    }
+
+    const db = database.getDb();
+
+    // Delete the QR code (convert id to ObjectId for MongoDB)
+    let objectId;
+    try {
+      objectId = new ObjectId(qrCodeId);
+    } catch (err) {
+      return sendErrorResponse(res, 400, "Invalid QR code ID format");
+    }
+    
+    const result = await db.collection(QRCode.collectionName).deleteOne(
+      { _id: objectId }
+    );
+
+    if (result.deletedCount === 0) {
+      return sendErrorResponse(res, 404, "QR code not found");
+    }
+
+    console.log(`[${requestId}][INFO] QR code deleted successfully`, {
+      qrCodeId
+    });
+
+    sendSuccessResponse(res, {
+      id: qrCodeId,
+      deleted: true
+    }, "QR code deleted successfully");
+
+  } catch (error) {
+    console.error(`[${requestId}][ERROR] Failed to delete QR code:`, {
+      error: error.message,
+      stack: error.stack
+    });
+
+    sendErrorResponse(res, 500, "Failed to delete QR code", {
       type: "unknown_error"
     });
   }

@@ -301,5 +301,149 @@ export const updateMessageStatus = async (messageId, status, adminNotes) => {
   }
 };
 
+// ============================================
+// QR CODE API FUNCTIONS
+// ============================================
+
+export const getQRCodes = async () => {
+  try {
+    console.log('Fetching QR codes...');
+    const response = await api.get('/qrcodes');
+    console.log('Raw QR codes response:', response.data);
+    
+    const backendResponse = response.data;
+    
+    if (backendResponse && backendResponse.success && backendResponse.data) {
+      console.log('QR codes retrieved successfully');
+      return backendResponse.data;
+    } else {
+      console.error('Invalid backend response structure:', backendResponse);
+      throw new Error('Invalid response from server');
+    }
+  } catch (error) {
+    console.error('Get QR Codes Error:', error);
+    
+    if (error.response && error.response.data) {
+      throw new Error(error.response.data.error?.message || 'Failed to load QR codes');
+    } else {
+      throw new Error(error.message || 'Failed to load QR codes');
+    }
+  }
+};
+
+export const lookupQRCode = async (code) => {
+  try {
+    console.log('Looking up QR code:', code);
+    const response = await api.get(`/qrcodes/lookup/${code}`);
+    console.log('Raw QR code lookup response:', response.data);
+    
+    const backendResponse = response.data;
+    
+    if (backendResponse && backendResponse.success && backendResponse.data) {
+      console.log('QR code found');
+      return backendResponse.data;
+    } else {
+      console.error('Invalid backend response structure:', backendResponse);
+      throw new Error('Invalid response from server');
+    }
+  } catch (error) {
+    console.error('QR Code Lookup Error:', error);
+    
+    if (error.response && error.response.data) {
+      throw new Error(error.response.data.error?.message || 'QR code not found');
+    } else {
+      throw new Error(error.message || 'QR code not found');
+    }
+  }
+};
+
+export const createQRCode = async (qrCodeData) => {
+  try {
+    console.log('Creating QR code:', JSON.stringify(qrCodeData));
+    const response = await api.post('/qrcodes', qrCodeData);
+    console.log('Raw create QR code response:', response.data);
+    
+    const backendResponse = response.data;
+    
+    if (backendResponse && backendResponse.success && backendResponse.data) {
+      console.log('QR code created successfully');
+      return {
+        success: true,
+        data: backendResponse.data,
+        message: backendResponse.message || 'QR code created successfully'
+      };
+    } else {
+      console.error('Invalid backend response structure:', backendResponse);
+      throw new Error('Invalid response from server');
+    }
+  } catch (error) {
+    console.error('Create QR Code Error:', error);
+    
+    if (error.response && error.response.data) {
+      throw new Error(error.response.data.error?.message || 'Failed to create QR code');
+    } else {
+      throw new Error(error.message || 'Failed to create QR code');
+    }
+  }
+};
+
+export const updateQRCode = async (qrCodeId, updateData) => {
+  try {
+    console.log('Updating QR code:', qrCodeId, JSON.stringify(updateData));
+    const response = await api.put(`/qrcodes/${qrCodeId}`, updateData);
+    console.log('Raw update QR code response:', response.data);
+    
+    const backendResponse = response.data;
+    
+    if (backendResponse && backendResponse.success) {
+      console.log('QR code updated successfully');
+      return {
+        success: true,
+        message: backendResponse.message || 'QR code updated successfully'
+      };
+    } else {
+      console.error('Invalid backend response structure:', backendResponse);
+      throw new Error('Invalid response from server');
+    }
+  } catch (error) {
+    console.error('Update QR Code Error:', error);
+    
+    if (error.response && error.response.data) {
+      throw new Error(error.response.data.error?.message || 'Failed to update QR code');
+    } else {
+      throw new Error(error.message || 'Failed to update QR code');
+    }
+  }
+};
+
+export const deleteQRCode = async (qrCodeId) => {
+  try {
+    console.log('Deleting QR code:', qrCodeId);
+    const response = await api.delete(`/qrcodes/${qrCodeId}`);
+    console.log('Raw delete QR code response:', response.data);
+    
+    const backendResponse = response.data;
+    
+    if (backendResponse && backendResponse.success) {
+      console.log('QR code deleted successfully');
+      return {
+        success: true,
+        message: backendResponse.message || 'QR code deleted successfully'
+      };
+    } else {
+      console.error('Invalid backend response structure:', backendResponse);
+      throw new Error('Invalid response from server');
+    }
+  } catch (error) {
+    console.error('Delete QR Code Error:', error);
+    
+    if (error.response && error.response.data) {
+      throw new Error(error.response.data.error?.message || 'Failed to delete QR code');
+    } else {
+      throw new Error(error.message || 'Failed to delete QR code');
+    }
+  }
+};
+
 export default api;
 

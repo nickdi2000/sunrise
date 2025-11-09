@@ -6,12 +6,15 @@ import NotFound from '../pages/NotFound.vue'
 import Login from '../pages/Login.vue'
 import Admin from '../pages/Admin.vue'
 import Messages from '../pages/Messages.vue'
+import QRCodes from '../pages/QRCodes.vue'
+import QRRedirect from '../pages/QRRedirect.vue'
 import { isAuthenticated } from '../utils/auth'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/youth', name: 'Youth', component: Youth },
   { path: '/contact', name: 'Contact', component: Contact },
+  { path: '/qr/:code', name: 'QRRedirect', component: QRRedirect },
   { 
     path: '/login', 
     name: 'Login', 
@@ -42,6 +45,19 @@ const routes = [
     path: '/admin/messages', 
     name: 'Messages', 
     component: Messages,
+    meta: { requiresAuth: true },
+    beforeEnter: (to, from, next) => {
+      if (!isAuthenticated()) {
+        next('/login')
+      } else {
+        next()
+      }
+    }
+  },
+  { 
+    path: '/admin/qrcodes', 
+    name: 'QRCodes', 
+    component: QRCodes,
     meta: { requiresAuth: true },
     beforeEnter: (to, from, next) => {
       if (!isAuthenticated()) {
